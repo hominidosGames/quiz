@@ -1,6 +1,7 @@
 <template>
-  
+   <ion-page>
     <wcBoardQuestions />
+   </ion-page>
 
 </template>
 
@@ -8,6 +9,6 @@
 
 
 import wcBoardQuestions from '@/wc-board-questions/wc-board-questions.vue';
-
+import { IonPage} from '@ionic/vue';
 
 </script>

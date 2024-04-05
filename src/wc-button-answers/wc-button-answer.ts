@@ -1,24 +1,23 @@
-
 import { defineComponent } from 'vue';
 
 
 export default defineComponent({
-    name: 'wc-button-question',
+    name: 'wc-button-answer',
     data() {
-        return {
-            questions: "boton de pregunta",
 
-        };
     },
-    props: {},
+    props: {
+        questions: { type: String, },
+        answers: { type: Object, }
+    },
 
     created() {
-    
+
     },
     mounted() {
-        
+
     },
     methods: {
-  
+     
     }
 });
