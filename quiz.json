@@ -1,450 +1,134 @@
 {
-    "preguntas": [
-        {
-            "categoria": "Geografía",
-            "pregunta": "¿Cuál es la moneda de Rumania?",
-            "respuestas": [
-                {
-                    "respuesta": "Euro",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Libra esterlina",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Leu rumano",
-                    "correcta": true
-                },
-                {
-                    "respuesta": "Dólar estadounidense",
-                    "correcta": false
-                }
-            ]
-        },
-        {
-            "categoria": "Geografía",
-            "pregunta": "¿Cuál es el río más largo del mundo?",
-            "respuestas": [
-                {
-                    "respuesta": "Nilo",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Amazonas",
-                    "correcta": true
-                },
-                {
-                    "respuesta": "Yangtsé",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Misisipi",
-                    "correcta": false
-                }
-            ]
-        },
-        {
-            "categoria": "Geografía",
-            "pregunta": "¿Cuál es el país más grande del mundo en términos de territorio?",
-            "respuestas": [
-                {
-                    "respuesta": "Estados Unidos",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Canadá",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Rusia",
-                    "correcta": true
-                },
-                {
-                    "respuesta": "China",
-                    "correcta": false
-                }
-            ]
-        },
-        {
-            "categoria": "Entretenimiento",
-            "pregunta": "¿Cuál es el videojuego que más copias ha vendido hasta la fecha (2022)?",
-            "respuestas": [
-                {
-                    "respuesta": "Minecraft",
-                    "correcta": true
-                },
-                {
-                    "respuesta": "Grand Theft Auto V",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Tetris",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Wii Sports",
-                    "correcta": false
-                }
-            ]
-        },
-        {
-            "categoria": "Entretenimiento",
-            "pregunta": "¿Quiénes son los actores principales en la película 'Demolition Man'?",
-            "respuestas": [
-                {
-                    "respuesta": "Sylvester Stallone y Wesley Snipes",
-                    "correcta": true
-                },
-                {
-                    "respuesta": "Arnold Schwarzenegger y Jean-Claude Van Damme",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Bruce Willis y Jackie Chan",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Tom Cruise y Keanu Reeves",
-                    "correcta": false
-                }
-            ]
-        },
-        {
-            "categoria": "Entretenimiento",
-            "pregunta": "¿Cuál es el nombre del personaje principal interpretado por Marlon Brando en la película 'El Padrino'?",
-            "respuestas": [
-                {
-                    "respuesta": "Michael Corleone",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Sonny Corleone",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Tom Hagen",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Vito Corleone",
-                    "correcta": true
-                }
-            ]
-        },
-        {
-            "categoria": "Entretenimiento",
-            "pregunta": "Cuál de las siguientes películas ganó el premio Óscar a la Mejor Película en el año 2021?",
-            "respuestas": [
-              
-                {
-                    "respuesta": "El juicio de los 7 de Chicago",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Nomadland",
-                    "correcta": true
-                },
-                {
-                    "respuesta": "Soul",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Minari",
-                    "correcta": false
-                }
-            ]
-        },
-        {
-            "categoria": "Entretenimiento",
-            "pregunta": "En qué año se lanzó el primer juego de la serie 'Super Mario Bros'?",
-            "respuestas": [
-                {
-                    "respuesta": "1985",
-                    "correcta": true
-                },
-                {
-                    "respuesta": "1990",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "1983",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "1995",
-                    "correcta": false
-                }
-            ]
-        },
-        {
-            "categoria": "Historia",
-            "pregunta": "¿En qué año comenzó la Primera Guerra Mundial?",
-            "respuestas": [
-               
-                {
-                    "respuesta": "1918",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "1939",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "1941",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "1914",
-                    "correcta": true
-                }
-            ]
-        },
-        {
-            "categoria": "Historia",
-            "pregunta": "¿Cuándo se completó la reconquista cristiana de la península ibérica?",
-            "respuestas": [
-                {
-                    "respuesta": "1492",
-                    "correcta": true
-                },
-                {
-                    "respuesta": "1212",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "711",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "1648",
-                    "correcta": false
-                }
-            ]
-        },
-        {
-            "categoria": "Historia",
-            "pregunta": "¿Qué evento dio inicio a la Segunda Guerra Mundial?",
-            "respuestas": [
-               
-                {
-                    "respuesta": "El ataque a Pearl Harbor",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "La invasión de Polonia por parte de Alemania",
-                    "correcta": true
-                },
-                {
-                    "respuesta": "La firma del Tratado de Versalles",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "La invasión de Francia por parte de Alemania",
-                    "correcta": false
-                }
-            ]
-        },
-        {
-            "categoria": "Historia",
-            "pregunta": "¿Cómo se llama el libro escrito por Adolf Hitler?",
-            "respuestas": [
-                {
-                    "respuesta": "Mein Kampf",
-                    "correcta": true
-                },
-                {
-                    "respuesta": "Das Kapital",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "El arte de la guerra",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "1984",
-                    "correcta": false
-                }
-            ]
-        },
-        {
-            "categoria": "Deportes",
-            "pregunta": "¿Qué jugador de la NBA ha ganado el mayor número de campeonatos en la historia de la liga?",
-            "respuestas": [
-                {
-                    "respuesta": "Michael Jordan",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Kareem Abdul-Jabbar",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Bill Russell",
-                    "correcta": true
-                },
-                {
-                    "respuesta": "Magic Johnson",
-                    "correcta": false
-                }
-            ]
-        },
-        {
-            "categoria": "Deportes",
-            "pregunta": "¿Cuál es el máximo goleador de la historia de La Liga española?",
-            "respuestas": [
-                {
-                    "respuesta": "Cristiano Ronaldo",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Lionel Messi",
-                    "correcta": true
-                },
-                {
-                    "respuesta": "Telmo Zarra",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Hugo Sánchez",
-                    "correcta": false
-                }
-            ]
-        },
-        {
-            "categoria": "Deportes",
-            "pregunta": "¿Cuántos títulos de Roland Garros ha ganado Rafael Nadal hasta la fecha?",
-            "respuestas": [
-                {
-                    "respuesta": "13",
-                    "correcta": true
-                },
-                {
-                    "respuesta": "11",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "9",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "15",
-                    "correcta": false
-                }
-            ]
-        },
-        {
-            "categoria": "Música",
-            "pregunta": "¿Cuál de estos álbumes fue lanzado primero?",
-            "respuestas": [
-                {
-                    "respuesta": "The Beatles - Sgt. Pepper's Lonely Hearts Club Band",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Pink Floyd - The Dark Side of the Moon",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Led Zeppelin - Led Zeppelin IV",
-                    "correcta": true
-                },
-                {
-                    "respuesta": "Michael Jackson - Thriller",
-                    "correcta": false
-                }
-            ]
-        },
-        {
-            "categoria": "Música",
-            "pregunta": "¿Quién es la cantante pop que lanzó el exitoso álbum '1989' en 2014?",
-            "respuestas": [
-                {
-                    "respuesta": "Taylor Swift",
-                    "correcta": true
-                },
-                {
-                    "respuesta": "Ariana Grande",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Katy Perry",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Selena Gomez",
-                    "correcta": false
-                }
-            ]
-        },
-        {
-            "categoria": "Música",
-            "pregunta": "¿En qué año lanzó Extremoduro su álbum 'Agila'?",
-            "respuestas": [
-                {
-                    "respuesta": "1992",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "1998",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "1994",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "1996",
-                    "correcta": true
-                }
-            ]
-        },
-        {
-            "categoria": "Música",
-            "pregunta": "¿En qué ciudad tuvo lugar el primer concierto que dio The Beatles en Estados Unidos?",
-            "respuestas": [
-                {
-                    "respuesta": "Washington D.C.",
-                    "correcta": true
-                },
-                {
-                    "respuesta": "Nueva York",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Los Ángeles",
-                    "correcta": false
-                },
-                {
-                    "respuesta": "Chicago",
-                    "correcta": false
-                }
-            ]
-        },
-        {
-            "categoria": "Música",
-            "pregunta": "¿Cuál fue el primer álbum en solitario de Phil Collins?",
-            "respuestas": [
-              {
-                "respuesta": "No Jacket Required",
-                "correcta": false
-              },
-              {
-                "respuesta": "Both Sides",
-                "correcta": false
-              },
-              {
-                "respuesta": "Face Value",
-                "correcta": true
-              },
-              {
-                "respuesta": "But Seriously",
-                "correcta": false
-              }
-            ]
-          }
-          
-        
+    "questions": {
+        "97": [
+            {
+                "category": "1",
+                "question": "¿Cuál es la moneda de Rumania?",
+                "answers": [ "Euro", "Libra esterlina", "Leu rumano", "Dólar estadounidense"],
+                "correct": 2
+            },
+            {
+                "category": "1",
+                "question": "¿Cuál es el río más largo del mundo?",
+                "answers": [ "Nilo", "Amazonas", "Yangtsé", "Misisipi"],
+                "correct": 1
+            },
+            {
+                "category": "1",
+                "question": "¿Cuál es el país más grande del mundo en términos de territorio?",
+                "answers": [ "Estados Unidos", "Canadá", "Rusia", "China" ],
+                "correct": 2
+            },
+            {
+                "category": "2",
+                "question": "¿Cuál es el videojuego que más copias ha vendido hasta la fecha (2022)?",
+                "answers": [ "Minecraft", "Grand Theft Auto V", "Tetris", "Wii Sports" ],
+                "correct": 0
+            },
+            {
+                "category": "2",
+                "question": "¿Quiénes son los actores principales en la película 'Demolition Man'?",
+                "answers": [ "Sylvester Stallone y Wesley Snipes", "Arnold Schwarzenegger y Jean-Claude Van Damme", "Bruce Willis y Jackie Chan", "Tom Cruise y Keanu Reeves"],
+                "correct": 0
+            }
+        ],
 
-    ]
+        "98": [
+            {
+                "category": "2",
+                "question": "¿Cuál es el nombre del personaje principal interpretado por Marlon Brando en la película 'El Padrino'?",
+                "answers": [  "Michael Corleone", "Sonny Corleone", "Tom Hagen", "Vito Corleone"],
+                "correct": 1
+            },
+            {
+                "category": "2",
+                "question": "Cuál de las siguientes películas ganó el premio Óscar a la Mejor Película en el año 2021?",
+                "answers": [ "El juicio de los 7 de Chicago", "Nomadland", "Soul", "Minari" ],
+                "correct": 1
+            },
+            {
+                "category": "2",
+                "question": "En qué año se lanzó el primer juego de la serie 'Super Mario Bros'?",
+                "answers": [ "1985", "1990", "1983", "1995" ],
+                "correct": 0
+            },
+            {
+                "category": "2",
+                "question": "¿En qué año comenzó la Primera Guerra Mundial?",
+                "answers": [ "1918", "1939",  "1941", "1914" ],
+                "correct": 3
+            },
+            {
+                "category": "2",
+                "question": "¿Cuándo se completó la reconquista cristiana de la península ibérica?",
+                "answers": [ "1492", "1212", "711", "1648" ],
+                "correct": 0
+            }
+        ],
+
+        "99": [
+            {
+                "category": "2",
+                "question": "¿Qué evento dio inicio a la Segunda Guerra Mundial?",
+                "answers": [ "El ataque a Pearl Harbor",  "La invasión de Polonia por parte de Alemania", "La firma del Tratado de Versalles", "La invasión de Francia por parte de Alemania" ],
+                "correct": 1
+            },
+            {
+                "category": "2",
+                "question": "¿Cómo se llama el libro escrito por Adolf Hitler?",
+                "answers": [  "Mein Kampf", "Das Kapital", "El arte de la guerra", "1984" ],
+                "correct": 1
+            },
+            {
+                "category": "4",
+                "question": "¿Qué jugador de la NBA ha ganado el mayor número de campeonatos en la historia de la liga?",
+                "answers": [ "Michael Jordan",  "Kareem Abdul-Jabbar", "Bill Russell", "Magic Johnson" ],
+                "correct": 2
+            },
+            {
+                "category": "4",
+                "question": "¿Cuál es el máximo goleador de la historia de La Liga española?",
+                "answers": [ "Cristiano Ronaldo", "Lionel Messi",  "Telmo Zarra", "Hugo Sánchez" ],
+                "correct": 1
+            },
+            {
+                "category": "4",
+                "question": "¿Cuántos títulos de Roland Garros ha ganado Rafael Nadal hasta la fecha?",
+                "answers": [ "13", "11", "9", "15" ],
+                "correct": 0
+            }
+        ],
+        "100": [
+            {
+                "category": "5",
+                "question": "¿Cuál de estos álbumes fue lanzado primero?",
+                "answers": [ "The Beatles - Sgt. Pepper's Lonely Hearts Club Band",  "Pink Floyd - The Dark Side of the Moon", "Led Zeppelin - Led Zeppelin IV", "Michael Jackson - Thriller" ],
+                "correct": 2
+            },
+            {
+                "category": "5",
+                "question": "¿Quién es la cantante pop que lanzó el exitoso álbum '1989' en 2014?",
+                "answers": [ "Taylor Swift", "Ariana Grande", "Katy Perry", "Selena Gomez" ],
+                "correct": 0
+            },
+            {
+                "category": "5",
+                "question": "¿En qué año lanzó Extremoduro su álbum 'Agila'?",
+                "answers": [ "1992", "1998", "1994", "1996" ],
+                "correct": 3
+            },
+            {
+                "category": "5",
+                "question": "¿En qué ciudad tuvo lugar el primer concierto que dio The Beatles en Estados Unidos?",
+                "answers": [ "Washington D.C.", "Nueva York", "Los Ángeles", "Chicago" ],
+                "correct": 0
+            },
+            {
+                "category": "5",
+                "question": "¿Cuál fue el primer álbum en solitario de Phil Collins?",
+                "answers": [ "No Jacket Required", "Both Sides", "Face Value" , "But Seriously" ],
+                "correct": 0
+            }
+        ]
+    }
 }
