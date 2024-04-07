@@ -1,12 +1,11 @@
 import quizJson from '../../quiz.json'
+import { Helper } from '../Helper'
 export class BoardQuestions {
 
-    public static instancia: null | BoardQuestions = null;
     private component: any;
-    public arrayAnswers:any;
+    public arrayAnswers: any;
 
     constructor($: any) {
-        BoardQuestions.instancia = this;
         this.component = $;
         this.arrayAnswers = []
     }
@@ -14,20 +13,24 @@ export class BoardQuestions {
 
     public onMounted() {
         this.sendAnswers()
-
     }
 
 
     public sendAnswers() {
-        const arrayAnswersAndQuestions = quizJson.preguntas;
-        this.component.answersQuiz = arrayAnswersAndQuestions;
+        interface QuizData {
+            questions: { [key: string]: any };
+        }
+        const arrayAnswersAndQuestions: QuizData = quizJson;
+        let currentDay = Helper.getDay().toString();
+        let jsonDay = arrayAnswersAndQuestions.questions[currentDay]
+        console.log(jsonDay,'jsonday');
+        
+        this.component.answersQuiz = jsonDay;
     }
 
-    public captureAnswers(responseUser: string){
-        console.log('entra en la clase y llega', responseUser);
+    public captureAnswers(responseUser: string) {
         this.arrayAnswers.push(responseUser)
-        console.log(this.arrayAnswers,'el array');
-        
+
     }
 
 }

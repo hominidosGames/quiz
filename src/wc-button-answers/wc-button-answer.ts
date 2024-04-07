@@ -3,21 +3,24 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
     name: 'wc-button-answer',
-    data() {
 
-    },
     props: {
         questions: { type: String, },
         answers: { type: Object, }
     },
 
-    created() {
+    emits: ['answer-selected', 'next-question'],
+    
 
-    },
-    mounted() {
-
-    },
     methods: {
-     
+        handleClick(answer) {
+            this.$emit('answer-selected', answer);
+        },
+
+        nextQuestion(answer) {
+            this.$emit('next-question', answer);
+        },
+
+
     }
 });

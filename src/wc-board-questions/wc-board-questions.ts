@@ -14,31 +14,32 @@ export default defineComponent({
     data() {
         return {
             answersQuiz: [],
-            currentIndex: 0
+            currentIndex: 0 
 
         };
     },
     props: {},
-    computed: {
-        currentQuestion() {
-          return this.answersQuiz[this.currentIndex];
-        }
-      },
-
+    
     mounted() {
         this.boardQuestions = new BoardQuestions(this);
         this.boardQuestions.onMounted();
 
     },
     methods: {
+     
         captureAnswers(event) {
-            let responseUser = event.text;
-            this.boardQuestions.captureAnswers(responseUser);
-
+            console.log(event);
+            
         },
-        nextQuestion() {
-            this.currentIndex++;
-          }
+
+        nextQuestion(){
+            console.log('entra en next');
+            if (this.currentIndex < this.answersQuiz.length - 1) {
+                this.currentIndex++;
+              }
+            
+        }
+      
 
     }
 });
