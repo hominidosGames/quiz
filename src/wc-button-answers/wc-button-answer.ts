@@ -6,8 +6,9 @@ export default defineComponent({
 
     props: {
         questions: { type: String, },
-        answers: { type: Object, }
+        answers: { type: Object, },
     },
+    
 
     emits: ['answer-selected', 'next-question'],
     
@@ -17,8 +18,8 @@ export default defineComponent({
             this.$emit('answer-selected', answer);
         },
 
-        nextQuestion(answer) {
-            this.$emit('next-question', answer);
+        nextQuestion() {
+            this.$emit('next-question');
         },
 
 

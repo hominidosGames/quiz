@@ -1,7 +1,7 @@
 
 import wcButtonAnswer from '../wc-button-answers/wc-button-answer.vue'
 import { defineComponent } from 'vue';
-import { BoardQuestions } from './BoardQuestions'
+import { Game } from '../class/Game'
 
 
 
@@ -14,32 +14,31 @@ export default defineComponent({
     data() {
         return {
             answersQuiz: [],
-            currentIndex: 0 
+            currentIndex: 0
 
         };
     },
     props: {},
-    
-    mounted() {
-        this.boardQuestions = new BoardQuestions(this);
-        this.boardQuestions.onMounted();
 
+    mounted() {
+        this.startGame = new Game(this)
+        this.startGame.searchQuestion()
     },
     methods: {
-     
+
         captureAnswers(event) {
-            console.log(event);
-            
+            this.startGame.captureAnswers()
+         
         },
 
-        nextQuestion(){
+        nextQuestion() {
             console.log('entra en next');
             if (this.currentIndex < this.answersQuiz.length - 1) {
                 this.currentIndex++;
-              }
-            
-        }
-      
+            }
+         
+        },
+
 
     }
 });
