@@ -7,11 +7,18 @@ export default defineComponent({
     props: {
         questions: { type: String, },
         answers: { type: Object, },
+        counter: { type: Number, default: 0 }
     },
-    
+
+    data() {
+        return {
+            selectedAnswer: null // Inicialmente no hay respuesta seleccionada
+        };
+    },
+
 
     emits: ['answer-selected', 'next-question'],
-    
+
 
     methods: {
         handleClick(answer) {
@@ -19,7 +26,7 @@ export default defineComponent({
         },
 
         nextQuestion() {
-            this.$emit('next-question');
+            this.$emit('next-question',this.selectedAnswer);
         },
 
 

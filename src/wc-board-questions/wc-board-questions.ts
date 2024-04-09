@@ -14,7 +14,9 @@ export default defineComponent({
     data() {
         return {
             answersQuiz: [],
-            currentIndex: 0
+            currentIndex: 0,
+            counter: 0,
+            selectedAnswer: null
 
         };
     },
@@ -27,16 +29,17 @@ export default defineComponent({
     methods: {
 
         captureAnswers(event) {
-            this.startGame.captureAnswers()
-         
+            this.selectedAnswer = event.target.textContent
+            this.counter++
+
         },
 
         nextQuestion() {
-            console.log('entra en next');
             if (this.currentIndex < this.answersQuiz.length - 1) {
                 this.currentIndex++;
             }
-         
+            this.counter = 0
+            this.startGame.arrayAnswers(this.selectedAnswer)
         },
 
 
