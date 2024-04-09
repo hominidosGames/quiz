@@ -9,10 +9,12 @@ export class Game {
     private component: any;
     private questionsDay?: Answer[];
     private arrayAnswersUser: any[];
+    private numSuccesses: any;
 
     constructor($: any) {
         this.component = $;
-        this.arrayAnswersUser = []
+        this.arrayAnswersUser = [];
+        this.numSuccesses = null;
     }
 
     public searchQuestion() {
@@ -20,6 +22,10 @@ export class Game {
         if (this.component) {
             this.component.answersQuiz = this.questionsDay
         }
+    }
+
+    public sendSuccesses() {
+        this.component.numSuccesses;
     }
 
 
@@ -37,12 +43,9 @@ export class Game {
         this.arrayAnswersUser.push(answer)
         let arrayTrueOptions = this.trueAnswersDay()
         if (this.arrayAnswersUser.length == 5) {
-            console.log(arrayTrueOptions, 'array de verdaderas');
-            console.log(this.arrayAnswersUser, 'array de usuario');
-           let cosa = this.compareArrays(this.arrayAnswersUser,arrayTrueOptions)
-           console.log(cosa,'que sale?');
-           
-            routes.push('/tabs/tab2')
+            let arrayCompared = this.compareArrays(this.arrayAnswersUser, arrayTrueOptions)
+            this.component.numSuccesses = arrayCompared.length
+            // routes.push('/tabs/tab2')
         }
     }
 
