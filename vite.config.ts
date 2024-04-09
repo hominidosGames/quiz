@@ -1,13 +1,14 @@
-import legacy from '@vitejs/plugin-legacy'
-import vue from '@vitejs/plugin-vue'
-import path from 'path'
-import { defineConfig } from 'vite'
+import windiCSS from 'vite-plugin-windicss';
+import vue from '@vitejs/plugin-vue';
+import legacy from '@vitejs/plugin-legacy';
+import path from 'path';
+import { defineConfig } from 'vite';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
-    legacy()
+    legacy(),
+    windiCSS()
   ],
   resolve: {
     alias: {
@@ -18,4 +19,5 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom'
   }
-})
+});
+
