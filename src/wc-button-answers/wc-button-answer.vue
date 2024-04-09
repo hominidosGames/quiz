@@ -1,7 +1,7 @@
 <template>
   <div class="p-3 flex justify-center flex-col items-center h-screen">
     <div class="p-3 w-1/2 mb-10">
-      <p class="text-center text-red-400 font-mono text-2xl">
+      <p class="text-center text-red-400 font-mono text-3xl">
         {{ questions }}
       </p>
     </div>
