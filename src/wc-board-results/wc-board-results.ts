@@ -3,14 +3,15 @@ import { defineComponent } from 'vue';
 import { useRoute } from 'vue-router';
 import { Helper } from '../Helper'
 import mookJson from '../../quiz.json'
+import { Results } from '../class/Results'
 
 export default defineComponent({
     name: 'wc-board-results',
 
     data() {
         return {
-            numSuccesses: [],
-            cosa: ""
+            resultsTrue: [],
+            totalResults: ""
 
 
         };
@@ -18,13 +19,9 @@ export default defineComponent({
     props: {},
 
     mounted() {
-        const route = useRoute();
-        this.numSuccesses = route.query.key
-        console.log(route.query);
+        this.menuResults = new Results(this)
+        this.menuResults.sendResults()
 
-        this.cosa = mookJson.questions[Helper.getDay()]
-        console.log(this.cosa,'la cosaaaa');
-        
     },
     methods: {
 
