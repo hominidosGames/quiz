@@ -1,25 +1,25 @@
 
 import { defineComponent } from 'vue';
-import { Game } from '../class/Game'
+
+import { Results } from '../class/Results'
 
 export default defineComponent({
     name: 'wc-board-results',
 
     data() {
         return {
-            numSuccesses: null
+          
 
         };
     },
     props: {},
 
     mounted() {
-        this.endGame = new Game(this)
-        this.endGame.sendSuccesses()
+      
     },
     methods: {
 
-
+  
 
 
     }

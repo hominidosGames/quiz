@@ -3,20 +3,19 @@ import wcButtonAnswer from '../wc-button-answers/wc-button-answer.vue'
 import { defineComponent } from 'vue';
 import { Game } from '../class/Game'
 
-
-
 export default defineComponent({
     name: 'wc-board-questions',
     components: {
         'wc-button-answer': wcButtonAnswer
     },
 
+
     data() {
         return {
             answersQuiz: [],
             currentIndex: 0,
             counter: 0,
-            selectedAnswer: null
+            selectedAnswer: null,
 
         };
     },
@@ -31,6 +30,7 @@ export default defineComponent({
         captureAnswers(event) {
             this.selectedAnswer = event.target.textContent
             this.counter++
+
 
         },
 

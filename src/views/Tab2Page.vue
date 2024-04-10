@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <wcBoardResults />
+    <wcBoardResults  />
   </ion-page>
 
 </template>

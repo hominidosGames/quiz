@@ -22,10 +22,17 @@ export class Game {
         if (this.component) {
             this.component.answersQuiz = this.questionsDay
         }
+        return this.questionsDay
     }
 
-    public sendSuccesses() {
-        this.component.numSuccesses;
+
+    public sendAnswersAndQuestiontrue() {
+        let trueAndQuestion: Array<any> = []
+        this.questionsDay = mookJson.questions[Helper.getDay()];
+        this.questionsDay?.forEach((element) => {
+            trueAndQuestion.push({ answerTrue: element.answers[element.correct], question: element.question })
+        });
+        return trueAndQuestion
     }
 
 
@@ -43,9 +50,13 @@ export class Game {
         this.arrayAnswersUser.push(answer)
         let arrayTrueOptions = this.trueAnswersDay()
         if (this.arrayAnswersUser.length == 5) {
-            let arrayCompared = this.compareArrays(this.arrayAnswersUser, arrayTrueOptions)
-            this.component.numSuccesses = arrayCompared.length
-            // routes.push('/tabs/tab2')
+            let arrayCompared = this.compareArrays(this.arrayAnswersUser, arrayTrueOptions);
+            routes.push({
+                path: '/tabs/tab2',
+                query: {
+                    key: arrayCompared,
+                }
+            });
         }
     }
 

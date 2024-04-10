@@ -129,6 +129,40 @@
                 "answers": [ "No Jacket Required", "Both Sides", "Face Value" , "But Seriously" ],
                 "correct": 0
             }
+            
+        ],
+        "101": [
+            {
+                "category": "5",
+                "question": "¿Cuál de estos álbumes fue lanzado primero?",
+                "answers": [ "The Beatles - Sgt. Pepper's Lonely Hearts Club Band",  "Pink Floyd - The Dark Side of the Moon", "Led Zeppelin - Led Zeppelin IV", "Michael Jackson - Thriller" ],
+                "correct": 2
+            },
+            {
+                "category": "5",
+                "question": "¿Quién es la cantante pop que lanzó el exitoso álbum '1989' en 2014?",
+                "answers": [ "Taylor Swift", "Ariana Grande", "Katy Perry", "Selena Gomez" ],
+                "correct": 0
+            },
+            {
+                "category": "5",
+                "question": "¿En qué año lanzó Extremoduro su álbum 'Agila'?",
+                "answers": [ "1992", "1998", "1994", "1996" ],
+                "correct": 3
+            },
+            {
+                "category": "5",
+                "question": "¿En qué ciudad tuvo lugar el primer concierto que dio The Beatles en Estados Unidos?",
+                "answers": [ "Washington D.C.", "Nueva York", "Los Ángeles", "Chicago" ],
+                "correct": 0
+            },
+            {
+                "category": "5",
+                "question": "¿Cuál fue el primer álbum en solitario de Phil Collins?",
+                "answers": [ "No Jacket Required", "Both Sides", "Face Value" , "But Seriously" ],
+                "correct": 0
+            }
+            
         ]
     }
 }
