@@ -1,0 +1,7 @@
+{
+  "name": "ProjectQuiz",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
