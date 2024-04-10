@@ -1,12 +1,4 @@
 <template>
-<<<<<<< HEAD
-    <div class="p-3 flex justify-center flex-col items-center h-screen">
-        <h1>FIN DE PARTIDA</h1>
-        <p>{{ numSuccesses }}</p>
-    </div>
-</template>
-<script src="./wc-board-results.ts"></script>
-=======
     <div class="p-3 flex flex-col items-center h-screen bg-indigo-800 overflow-y-auto">
      <h1 class="text-green-400 font-mono text-3xl mb-2 text-center bg-gray-500 p-5 rounded">Tus resultados</h1>
         <div class="w-full max-w-screen-md mb-20 mt-20">
@@ -39,4 +31,4 @@
 
 
 <script src="./wc-board-results"></script>
->>>>>>> 045d797014e69b0ab2c02bca817e317694246984
+
