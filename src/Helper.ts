@@ -5,4 +5,12 @@ export class Helper {
     
         return dayYear;
     }
+
+    static dispatch(evtName: string, obj: any) {
+        document.dispatchEvent(new CustomEvent(evtName, { detail: obj }));
+    }
+
+    static listener(evtName: string, callback: Function) {
+        document.addEventListener(evtName, (e) => {callback(e.detail)});
+    }
 }

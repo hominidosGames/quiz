@@ -2,6 +2,7 @@ import mookJson from '../../quiz.json';
 import { Answer } from '@/types/Question';
 import { Helper } from '@/Helper';
 import routes from '../router/index';
+import { Timer } from './Timer';
 
 
 export class Game {
@@ -10,11 +11,15 @@ export class Game {
     private questionsDay?: Answer[];
     private arrayAnswersUser: any[];
     private numSuccesses: any;
+    private timer: Timer;
 
     constructor($: any) {
         this.component = $;
         this.arrayAnswersUser = [];
         this.numSuccesses = null;
+        this.timer = new Timer(100);
+
+        //Helper.listener("timer-finish", this.nextQuestion());
     }
 
     public searchQuestion() {
@@ -71,6 +76,10 @@ export class Game {
             })
         })
         return arraySuccesses
+    }
+
+    public initTimer() {
+        this.timer.init();
     }
 
 }

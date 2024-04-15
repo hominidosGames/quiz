@@ -1,6 +1,7 @@
 <template>
    <ion-page>
-    <wcBoardQuestions />
+      <wcTimerBar></wcTimerBar>
+      <wcBoardQuestions />
    </ion-page>
 
 </template>
@@ -9,6 +10,7 @@
 
 
 import wcBoardQuestions from '@/wc-board-questions/wc-board-questions.vue';
-import { IonPage} from '@ionic/vue';
+import wcTimerBar from '@/components/wc-timer-bar/wc-timer-bar.vue';
+import { IonPage } from '@ionic/vue';
 
 </script>

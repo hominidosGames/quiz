@@ -12,5 +12,6 @@ export class Manager {
         
         this.game = new Game();
         this.game.searchQuestion();
+        this.game.initTimer();
     }
 }
