@@ -24,6 +24,7 @@ export default defineComponent({
     mounted() {
         this.startGame = new Game(this)
         this.startGame.searchQuestion()
+        this.startGame.initTimer();
     },
     methods: {
 

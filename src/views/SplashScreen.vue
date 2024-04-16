@@ -9,7 +9,7 @@ import { IonPage } from '@ionic/vue';
 import routes from '../router/index';
 
 setTimeout(() => {
-    routes.push({ path: '/tabs/tab1' });
+    routes.push({ path: '/presentation' });
 }, 3000);
 
 </script>

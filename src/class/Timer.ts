@@ -25,14 +25,6 @@ export class Timer {
             setTimeout(() => {
                 this.actualTime -= 0.1;
                 Helper.dispatch("timer-update", {actualTime: this.actualTime});
-                //this.$refs.timer.style.width = `${this.value}%`;
-                if (this.actualTime <= 30) {
-                    //this.$refs.timer.style.backgroundColor = "#D50000";
-                    //this.$refs.timerMsg.classList.add("ani-timer-msg");
-                } else {
-                    //this.$refs.timer.style.backgroundColor = "#00C853";
-                }
-
                 this.countdown();
             }, 10);
         } else {
