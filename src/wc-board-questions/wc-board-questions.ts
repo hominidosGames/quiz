@@ -25,7 +25,7 @@ export default defineComponent({
 
         this.startGame = new Manager(this)
         this.startGame.initGame()
-        this.startGame.initTimer();
+        // this.startGame.initTimer();
 
     },
     methods: {

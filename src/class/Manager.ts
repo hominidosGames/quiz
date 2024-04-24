@@ -20,7 +20,7 @@ export class Manager {
     public initGame() {
 
         this.game = new Game();
-        this.game.searchQuestion();
+       this.component.answersQuiz = this.game.searchQuestion();
         this.game.initTimer();
     }
 
