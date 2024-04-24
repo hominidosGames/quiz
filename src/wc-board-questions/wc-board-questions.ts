@@ -22,8 +22,11 @@ export default defineComponent({
     props: {},
 
     mounted() {
+
         this.startGame = new Manager(this)
         this.startGame.initGame()
+        this.startGame.initTimer();
+
     },
     methods: {
 

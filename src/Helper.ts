@@ -7,7 +7,6 @@ export class Helper {
         return dayYear;
     }
 
-
     static trueAnswersDay(): Array<string> {
         let trueOptions: Array<string> = []
         let questionsDay: Array<string> = []
@@ -18,5 +17,13 @@ export class Helper {
         return trueOptions
     }
 
+
+    static dispatch(evtName: string, obj: any) {
+        document.dispatchEvent(new CustomEvent(evtName, { detail: obj }));
+    }
+
+    static listener(evtName: string, callback: Function) {
+        document.addEventListener(evtName, (e) => { callback(e.detail) });
+    }
 
 }

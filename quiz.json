@@ -1,6 +1,6 @@
 {
     "questions": {
-        "97": [
+        "107": [
             {
                 "category": "1",
                 "question": "¿Cuál es la moneda de Rumania?",
@@ -57,7 +57,12 @@
                 "correct": 0
             }
         ],
+<<<<<<< HEAD
         "98": [
+=======
+
+        "108": [
+>>>>>>> f8a0517052b48c8c70901974818368d40de2ff35
             {
                 "category": "2",
                 "question": "¿Cuál es el nombre del personaje principal interpretado por Marlon Brando en la película 'El Padrino'?",
@@ -114,7 +119,12 @@
                 "correct": 0
             }
         ],
+<<<<<<< HEAD
         "99": [
+=======
+
+        "109": [
+>>>>>>> f8a0517052b48c8c70901974818368d40de2ff35
             {
                 "category": "2",
                 "question": "¿Qué evento dio inicio a la Segunda Guerra Mundial?",
@@ -171,7 +181,7 @@
                 "correct": 0
             }
         ],
-        "100": [
+        "110": [
             {
                 "category": "5",
                 "question": "¿Cuál de estos álbumes fue lanzado primero?",
@@ -228,7 +238,7 @@
                 "correct": 0
             }
         ],
-        "101": [
+        "111": [
             {
                 "category": "5",
                 "question": "¿Cuál de estos álbumes fue lanzado primero?",
