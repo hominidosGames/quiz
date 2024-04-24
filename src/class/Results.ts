@@ -2,7 +2,7 @@
 import { useRoute } from 'vue-router';
 import mookJson from '../../quiz.json';
 import { Helper } from '@/Helper';
-import { Game } from '../class/Game'
+import { Answer } from '@/types/Question';
 
 export class Results {
 
@@ -21,7 +21,7 @@ export class Results {
         this.questionsDay = mookJson.questions[Helper.getDay()];
         if (this.questionsDay && asnwersUser) {
             this.component.resultsTrue = this.sendResultsTrue(this.questionsDay, asnwersUser);
-            this.component.totalResults = this.sendTotalQuestions();
+            this.component.totalResults = this.sendAnswersAndQuestiontrue();
         }
     }
 
@@ -40,13 +40,14 @@ export class Results {
         return answersTrue
     }
 
-
-    public sendTotalQuestions() {
-        this.game = new Game();
-        let totalTrueQuestionDay = this.game.sendAnswersAndQuestiontrue();
-        return totalTrueQuestionDay
+    public sendAnswersAndQuestiontrue() {
+        let trueAndQuestion: Array<any> = []
+        this.questionsDay = mookJson.questions[Helper.getDay()];
+        this.questionsDay?.forEach((element) => {
+            trueAndQuestion.push({ answerTrue: element.answers[element.correct], question: element.question })
+        });
+        return trueAndQuestion
     }
-
 
 
 }

@@ -1,7 +1,7 @@
 
 import wcButtonAnswer from '../wc-button-answers/wc-button-answer.vue'
 import { defineComponent } from 'vue';
-import { Game } from '../class/Game'
+import { Manager } from '../class/Manager'
 
 export default defineComponent({
     name: 'wc-board-questions',
@@ -22,16 +22,15 @@ export default defineComponent({
     props: {},
 
     mounted() {
-        this.startGame = new Game(this)
-        this.startGame.searchQuestion()
+        this.startGame = new Manager(this)
+        this.startGame.initGame()
     },
     methods: {
 
         captureAnswers(event) {
             this.selectedAnswer = event.target.textContent
             this.counter++
-
-
+            this.nextQuestion()
         },
 
         nextQuestion() {
