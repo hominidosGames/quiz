@@ -1,8 +1,6 @@
 
 import { defineComponent } from 'vue';
-import { useRoute } from 'vue-router';
-import { Helper } from '../Helper'
-import mookJson from '../../quiz.json'
+import routes from '../router/index';
 import { Results } from '../class/Results'
 
 export default defineComponent({
@@ -24,7 +22,10 @@ export default defineComponent({
 
     },
     methods: {
-
+        goToMenu(){
+            //esto llevará a la pagina principal
+            routes.push('/tabs/tab1');
+        }
 
     }
 });
