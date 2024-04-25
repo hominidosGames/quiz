@@ -7,12 +7,14 @@ export default defineComponent({
     props: {
         questions: { type: String, },
         answers: { type: Object, },
-        counter: { type: Number, default: 0 }
+        counter: { type: Number, default: 0 },
+        showQuestion: { type: Boolean },
+        showAnswers: { type: Boolean },
     },
 
     data() {
         return {
-            selectedAnswer: null // Inicialmente no hay respuesta seleccionada
+            selectedAnswer: null,
         };
     },
 
@@ -26,7 +28,7 @@ export default defineComponent({
         },
 
         nextQuestion() {
-            this.$emit('next-question',this.selectedAnswer);
+            this.$emit('next-question', this.selectedAnswer);
         },
 
 

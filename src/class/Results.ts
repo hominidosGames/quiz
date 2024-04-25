@@ -26,19 +26,21 @@ export class Results {
     }
 
 
-    public sendResultsTrue(arrayTotal: Array<any>, arrayUser: Array<any>) {
+    public sendResultsTrue(arrayTotal: Array<any>, arrayUser: Array<string>) {
         let answersTrue: Array<any> = [];
-        arrayTotal.map((property) => {
-            property.answers.forEach((element) => {
-                arrayUser.forEach((answer) => {
-                    if (element === answer) {
-                        answersTrue.push({ questionUser: property.question, answerUser: element });
-                    }
-                })
-            })
-        })
-        return answersTrue
+    
+        arrayTotal.forEach((question) => {
+            if (question.answers[question.correct] === arrayUser[arrayTotal.indexOf(question)]) {
+                answersTrue.push({
+                    questionUser: question.question,
+                    answerUser: arrayUser[arrayTotal.indexOf(question)]
+                });
+            }
+        });
+    
+        return answersTrue;
     }
+    
 
     public sendAnswersAndQuestiontrue() {
         let trueAndQuestion: Array<any> = []

@@ -25,31 +25,10 @@ export class Manager {
     }
 
 
-    public sendAnswersAndQuestiontrue() {
-        let trueAndQuestion: Array<any> = []
-        this.questionsDay = mookJson.questions[Helper.getDay()];
-        this.questionsDay?.forEach((element) => {
-            trueAndQuestion.push({ answerTrue: element.answers[element.correct], question: element.question })
-        });
-        return trueAndQuestion
-    }
-
-
-    // public trueAnswersDay(): Array<string> {
-    //     let trueOptions: Array<string> = []
-    //     this.questionsDay = mookJson.questions[Helper.getDay()];
-    //     this.questionsDay?.forEach((element) => {
-    //         trueOptions.push(element.answers[element.correct])
-    //     });
-    //     return trueOptions
-    // }
-
-
     public arrayAnswers(answer: string) {
         this.arrayAnswersUser.push(answer)
-        // let arrayTrueOptions = this.trueAnswersDay()
         let arrayTrueOptions = Helper.trueAnswersDay()
-        if (this.arrayAnswersUser.length == 5) {
+        if (this.arrayAnswersUser.length === 5) {
             let arrayCompared = this.compareArrays(this.arrayAnswersUser, arrayTrueOptions);
             routes.push({
                 path: '/tabs/tab2',
@@ -70,6 +49,7 @@ export class Manager {
                 }
             })
         })
+        
         return arraySuccesses
     }
 

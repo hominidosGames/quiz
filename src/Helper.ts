@@ -1,4 +1,5 @@
 import mookJson from '../../quiz/quiz.json'
+
 export class Helper {
     static getDay() {
         const date = new Date();
@@ -10,10 +11,15 @@ export class Helper {
     static trueAnswersDay(): Array<string> {
         let trueOptions: Array<string> = []
         let questionsDay: Array<string> = []
-        questionsDay = mookJson.questions[Helper.getDay()];
+        let dayIndex = this.getDay();
+        questionsDay = mookJson.questions[dayIndex];
+        
         questionsDay?.forEach((element) => {
             trueOptions.push(element.answers[element.correct])
         })
+
+        console.log(trueOptions,'las correctas');
+        
         return trueOptions
     }
 
