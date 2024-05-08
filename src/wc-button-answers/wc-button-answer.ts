@@ -10,6 +10,7 @@ export default defineComponent({
         counter: { type: Number, default: 0 },
         showQuestion: { type: Boolean },
         showAnswers: { type: Boolean },
+        esCorrecta: { type: Boolean }
     },
 
     data() {

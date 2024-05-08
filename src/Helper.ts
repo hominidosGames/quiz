@@ -8,18 +8,16 @@ export class Helper {
         return dayYear;
     }
 
-    static trueAnswersDay(): Array<string> {
-        let trueOptions: Array<string> = []
-        let questionsDay: Array<string> = []
-        let dayIndex = this.getDay();
+    static trueAnswersDay(): Array<{ question: string; response: string }> {
+        let trueOptions: Array<{ question: string; response: string }> = [];
+        let questionsDay: Array<any> = [];
+        const dayIndex: number = this.getDay();
         questionsDay = mookJson.questions[dayIndex];
-        
+
         questionsDay?.forEach((element) => {
-            trueOptions.push(element.answers[element.correct])
+            trueOptions.push({ question: element.question, response: element.answers[element.correct] })
         })
 
-        console.log(trueOptions,'las correctas');
-        
         return trueOptions
     }
 

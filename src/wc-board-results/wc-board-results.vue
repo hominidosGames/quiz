@@ -6,8 +6,8 @@
                 <tbody>
                     <tr v-for="(answer, index) in resultsTrue" :key="index"
                         class="border border-neutral-200 text-white ">
-                        <td class="px-3 py-2 text-xs bg-purple-900 font-mono">{{ answer.questionUser }}</td>
-                        <td class="px-3 py-2 text-xs bg-purple-900 font-mono">{{ answer.answerUser }}</td>
+                        <td class="px-3 py-2 text-xs bg-purple-900 font-mono">{{ answer.question }}</td>
+                        <td class="px-3 py-2 text-xs bg-purple-900 font-mono">{{ answer.response }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -20,7 +20,7 @@
                     <tr v-for="(preguntaRespuesta, index) in totalResults" :key="index"
                         class="border border-neutral-200 text-white">
                         <td class="px-3 py-2 text-xs bg-purple-900 font-mono">{{ preguntaRespuesta.question }}</td>
-                        <td class="px-3 py-2 text-xs bg-purple-900 font-mono">{{ preguntaRespuesta.answerTrue }}</td>
+                        <td class="px-3 py-2 text-xs bg-purple-900 font-mono">{{ preguntaRespuesta.response }}</td>
                     </tr>
                 </tbody>
             </table>

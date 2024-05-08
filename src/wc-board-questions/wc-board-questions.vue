@@ -8,13 +8,21 @@
         </div>
 
         <div v-if="!showQuestion && showAnswers">
-            <wc-button-answer :questions="answersQuiz[currentIndex].question"
+
+            <wc-button-answer :questions="answersQuiz[currentIndex].question" :esCorrecta="esCorrecta"
                 :answers="answersQuiz[currentIndex].answers" @answer-selected="captureAnswers($event)"
                 :counter="counter" />
+
         </div>
-        
+
     </div>
 
 </template>
 
 <script src="./wc-board-questions"></script>
+
+<style>
+.esCorrecta {
+    background-color: green;
+}
+</style>

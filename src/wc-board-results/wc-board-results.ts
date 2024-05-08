@@ -9,7 +9,7 @@ export default defineComponent({
     data() {
         return {
             resultsTrue: [],
-            totalResults: ""
+            totalResults: []
 
 
         };
@@ -18,11 +18,13 @@ export default defineComponent({
 
     mounted() {
         this.menuResults = new Results(this)
-        this.menuResults.sendResults()
-
+        const key = this.$route.query.key;
+        const keyTwo = this.$route.query.keyTwo;
+        this.resultsTrue = JSON.parse(key)
+        this.totalResults = JSON.parse(keyTwo)
     },
     methods: {
-        goToMenu(){
+        goToMenu() {
             //esto llevará a la pagina principal
             routes.push('/tabs/tab1');
         }
