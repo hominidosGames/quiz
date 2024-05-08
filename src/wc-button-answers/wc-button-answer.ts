@@ -1,3 +1,4 @@
+import { Helper } from '@/Helper';
 import { defineComponent } from 'vue';
 
 
@@ -10,7 +11,7 @@ export default defineComponent({
         counter: { type: Number, default: 0 },
         showQuestion: { type: Boolean },
         showAnswers: { type: Boolean },
-        esCorrecta: { type: Boolean }
+        esCorrecta: { type: Boolean },
     },
 
     data() {
@@ -24,8 +25,12 @@ export default defineComponent({
 
 
     methods: {
-        handleClick(answer) {
-            this.$emit('answer-selected', answer);
+        handleClick(answer, index) {
+            this.selectedAnswer = index
+
+            this.$emit('answer-selected', answer, index);
+       
+
         },
 
         nextQuestion() {

@@ -1,7 +1,7 @@
 <template>
 
-    <div class="flex justify-center flex-col items-center bg-gradient-to-r from-purple-600 via-purple-600 to-purple-600"
-        v-if="answersQuiz.length > 0">
+<div class="bg-center bg-no-repeat bg-cover bg-top h-screen flex justify-center flex-col items-center"
+   v-if="answersQuiz.length > 0">
 
         <div v-if="showQuestion">
             <wc-button-answer :questions="answersQuiz[currentIndex].question" />
@@ -9,9 +9,9 @@
 
         <div v-if="!showQuestion && showAnswers">
 
-            <wc-button-answer :questions="answersQuiz[currentIndex].question" :esCorrecta="esCorrecta"
-                :answers="answersQuiz[currentIndex].answers" @answer-selected="captureAnswers($event)"
-                :counter="counter" />
+            <wc-button-answer :questions="answersQuiz[currentIndex].question"
+                :answers="answersQuiz[currentIndex].answers" @answer-selected="captureAnswers" :counter="counter"
+                :selected-answer="selectedAnswer" />
 
         </div>
 
@@ -20,9 +20,3 @@
 </template>
 
 <script src="./wc-board-questions"></script>
-
-<style>
-.esCorrecta {
-    background-color: green;
-}
-</style>

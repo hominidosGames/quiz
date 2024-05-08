@@ -53,4 +53,43 @@ export class Manager {
         return arraySuccesses
     }
 
+
+
+    public paintColor(answer: any) {
+        const buttons = document.querySelectorAll('.button-answer');
+        let foundCorrectAnswer = false;
+        let questionDay = Helper.trueAnswersDay();
+        questionDay.forEach((element) => {
+            const trimmedResponse = element.response.trim();
+            if (trimmedResponse === answer.target.textContent.trim()) {
+                foundCorrectAnswer = true;
+                buttons.forEach(button => {
+                    if (button.textContent === answer.target.textContent.trim()) {
+                        button.classList.add('bg-green-200');
+                        setTimeout(() => {
+                            button.classList.remove('bg-green-200');
+                        }, 1000);
+                    } else {
+                        button.classList.add('bg-red-400');
+                        setTimeout(() => {
+                            button.classList.remove('bg-red-400');
+                        }, 1000);
+                    }
+                });
+            }
+        });
+    
+        if (!foundCorrectAnswer) {
+            buttons.forEach(button => {
+                button.classList.add('bg-red-400');
+                setTimeout(() => {
+                    button.classList.remove('bg-red-400');
+                }, 1000);
+            });
+        }
+    }
+    
+    
+    
+
 }
