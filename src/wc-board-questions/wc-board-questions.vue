@@ -1,9 +1,19 @@
 <template>
-    <div class="flex justify-center flex-col items-center bg-indigo-800 overflow-y-scroll"
-        v-if="answersQuiz.length > 0">
 
-        <wc-button-answer :questions="answersQuiz[currentIndex].question" :answers="answersQuiz[currentIndex].answers"
-            @answer-selected="captureAnswers($event)" @nextQuestion="nextQuestion()" :counter="counter" />
+<div class="bg-center bg-no-repeat bg-cover bg-top h-screen flex justify-center flex-col items-center"
+   v-if="answersQuiz.length > 0">
+
+        <div v-if="showQuestion">
+            <wc-button-answer :questions="answersQuiz[currentIndex].question" />
+        </div>
+
+        <div v-if="!showQuestion && showAnswers">
+
+            <wc-button-answer :questions="answersQuiz[currentIndex].question"
+                :answers="answersQuiz[currentIndex].answers" @answer-selected="captureAnswers" :counter="counter"
+                :selected-answer="selectedAnswer" />
+
+        </div>
 
     </div>
 

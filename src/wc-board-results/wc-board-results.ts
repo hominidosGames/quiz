@@ -1,8 +1,6 @@
 
 import { defineComponent } from 'vue';
-import { useRoute } from 'vue-router';
-import { Helper } from '../Helper'
-import mookJson from '../../quiz.json'
+import routes from '../router/index';
 import { Results } from '../class/Results'
 
 export default defineComponent({
@@ -11,7 +9,7 @@ export default defineComponent({
     data() {
         return {
             resultsTrue: [],
-            totalResults: ""
+            totalResults: []
 
 
         };
@@ -20,11 +18,16 @@ export default defineComponent({
 
     mounted() {
         this.menuResults = new Results(this)
-        this.menuResults.sendResults()
-
+        const key = this.$route.query.key;
+        const keyTwo = this.$route.query.keyTwo;
+        this.resultsTrue = JSON.parse(key)
+        this.totalResults = JSON.parse(keyTwo)
     },
     methods: {
-
+        goToMenu() {
+            //esto llevará a la pagina principal
+            routes.push('/tabs/tab1');
+        }
 
     }
 });

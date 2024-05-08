@@ -1,3 +1,4 @@
+import { Helper } from '@/Helper';
 import { defineComponent } from 'vue';
 
 
@@ -7,12 +8,15 @@ export default defineComponent({
     props: {
         questions: { type: String, },
         answers: { type: Object, },
-        counter: { type: Number, default: 0 }
+        counter: { type: Number, default: 0 },
+        showQuestion: { type: Boolean },
+        showAnswers: { type: Boolean },
+        esCorrecta: { type: Boolean },
     },
 
     data() {
         return {
-            selectedAnswer: null // Inicialmente no hay respuesta seleccionada
+            selectedAnswer: null,
         };
     },
 
@@ -21,12 +25,16 @@ export default defineComponent({
 
 
     methods: {
-        handleClick(answer) {
-            this.$emit('answer-selected', answer);
+        handleClick(answer, index) {
+            this.selectedAnswer = index
+
+            this.$emit('answer-selected', answer, index);
+       
+
         },
 
         nextQuestion() {
-            this.$emit('next-question',this.selectedAnswer);
+            this.$emit('next-question', this.selectedAnswer);
         },
 
 

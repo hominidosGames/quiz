@@ -1,22 +1,23 @@
 <template>
-  <div class="p-3 flex justify-center flex-col items-center h-screen">
-    <div class="p-3 w-1/2 mb-10">
-      <p class="text-center text-red-400 font-mono text-2xl">
+  <div class="p-2 flex justify-center flex-col items-center h-screen bg-green-400">
+
+    <div
+    class="w-85 h-auto min-h-10rem flex justify-center items-center fixed top-15 m-5 p-5 text-white border border-black sm:w-4/5 md:w-1/2 text-sm py-2.5 mb-10 rounded-lg font-mono bg-green-200 shadow-lg hover:shadow-lg">
+      <p class="text-center text-black font-mono text-sm">
         {{ questions }}
       </p>
     </div>
 
-    <div class="p-3 flex justify-center flex-col items-center w-screen">
+    <div class="flex justify-center flex-col items-center w-screen m-5 mt-60">
       <button v-for="(answer, index) in answers" :key="index" @click="handleClick($event)"
-        class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 w-1/2 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-15 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 font-mono">
+        class="button-answer w-95vw mt-5 p-10 bg-yellow-400 text-black text-sm py-2.5 mb-6 rounded-lg font-mono shadow hover:shadow-md">
         {{ answer }}
       </button>
-
-      <button @click="nextQuestion" v-if="counter > 0"
-        class="bg-red-400 text-color-black rounded w-1/3 py-2 px-4">Siguiente</button>
-      <button @click="nextQuestion" v-else
-        class="bg-gray-300 text-gray-600 font-semibold py-2 px-4 rounded inline-flex items-center cursor-not-allowed opacity-50 pointer-events-none">Siguiente</button>
     </div>
+
+    <figure class="mb-5 mt-2">
+      <img src="../../public/logo-literatura.jpg" alt="" class="w-16 h-16 rounded-full">
+    </figure>
   </div>
 </template>
 
