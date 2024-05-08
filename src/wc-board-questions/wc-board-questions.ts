@@ -2,6 +2,7 @@
 import wcButtonAnswer from '../wc-button-answers/wc-button-answer.vue'
 import { defineComponent } from 'vue';
 import { Manager } from '../class/Manager'
+import { Helper } from '@/Helper';
 
 export default defineComponent({
     name: 'wc-board-questions',
@@ -18,17 +19,16 @@ export default defineComponent({
             selectedAnswer: null,
             showQuestion: true,
             showAnswers: false,
-            timeoutId: null
-
         };
     },
-    props: {},
+    props: {
+        respuestaCorrecta: String,
+    },
 
     mounted() {
 
         this.startGame = new Manager(this)
         this.startGame.initGame()
-
         this.startTimeout();
 
     },
@@ -36,31 +36,41 @@ export default defineComponent({
 
         captureAnswers(event) {
             this.selectedAnswer = event.target.textContent
-            this.counter++
-            clearTimeout(this.timeoutId);
-            this.nextQuestion();
+            this.paintColor(event);
+            setTimeout(() => {
+                this.nextQuestion(event);
+            }, 1000);
+            this.counter++;
+            // this.nextQuestion(event);
         },
 
-        nextQuestion() {
+        nextQuestion(event) {
             if (this.currentIndex < this.answersQuiz.length - 1) {
                 this.currentIndex++;
                 this.showQuestion = true;
                 this.showAnswers = false;
                 this.startTimeout();
                 this.counter = 0
-               
-            }
 
+            }
             this.startGame.arrayAnswers(this.selectedAnswer)
 
         },
 
         startTimeout() {
-            this.timeoutId = setTimeout(() => {
+            setTimeout(() => {
                 this.showQuestion = false;
                 this.showAnswers = true;
-            }, 2000);
+            }, 1000);
         },
+
+
+        paintColor(answer){
+
+            this.startGame.paintColor(answer)
+        
+        }
+
 
 
     }
