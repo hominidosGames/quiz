@@ -1,6 +1,6 @@
 <template>
     <div class="p-5 flex flex-col items-center bg-gradient-to-r bg-green-400 h-screen">
-        <div class="mb-10 mt-8">
+        <div class="mb-15 mt-15">
             <p class="text-black font-mono text-m mb-5 text-center">Respuestas acertadas</p>
             <table class="w-full divide-y text-left text-sm">
                 <tbody>
@@ -25,11 +25,19 @@
                 </tbody>
             </table>
         </div>
-        <div class="m-10">
+        <div class="m-40">
             <button @click="goToMenu"
                 class="px-4 py-2 bg-green-600 hover:bg-green-300 text-white rounded-md shadow-md font-mono">Menu
                 principal</button>
         </div>
+
+
+        <!-- <button class="fixed bottom-0 mb-5 mt-2 left-1/2 transform -translate-x-1/2">
+            <figure>
+                <img src="../../public/compatir.png" alt="" class="w-28 h-28 rounded-full " >
+            </figure>
+        </button> -->
+
     </div>
 </template>
 
