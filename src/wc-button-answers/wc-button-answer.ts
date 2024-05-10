@@ -11,7 +11,7 @@ export default defineComponent({
         counter: { type: Number, default: 0 },
         showQuestion: { type: Boolean },
         showAnswers: { type: Boolean },
-        esCorrecta: { type: Boolean },
+        disabled: { type: Boolean }
     },
 
     data() {
@@ -29,7 +29,7 @@ export default defineComponent({
             this.selectedAnswer = index
 
             this.$emit('answer-selected', answer, index);
-       
+
 
         },
 

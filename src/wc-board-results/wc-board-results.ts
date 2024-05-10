@@ -26,7 +26,7 @@ export default defineComponent({
     methods: {
         goToMenu() {
             //esto llevará a la pagina principal
-            routes.push('/tabs/tab1');
+            routes.push('/mainMenu');
         }
 
     }

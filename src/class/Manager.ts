@@ -9,8 +9,8 @@ export class Manager {
     private game: Game | null;
     private arrayAnswersUser: any[];
 
-    constructor($: any) {
-        this.component = $
+    constructor(component: any) {
+        this.component = component
         this.game = null;
         this.arrayAnswersUser = [];
     }
@@ -55,41 +55,35 @@ export class Manager {
 
 
 
-    public paintColor(answer: any) {
+    public paintColorQuestions(answer: any) {
         const buttons = document.querySelectorAll('.button-answer');
         let foundCorrectAnswer = false;
         let questionDay = Helper.trueAnswersDay();
+
         questionDay.forEach((element) => {
             const trimmedResponse = element.response.trim();
             if (trimmedResponse === answer.target.textContent.trim()) {
                 foundCorrectAnswer = true;
                 buttons.forEach(button => {
                     if (button.textContent === answer.target.textContent.trim()) {
-                        button.classList.add('bg-green-200');
-                        setTimeout(() => {
-                            button.classList.remove('bg-green-200');
-                        }, 1000);
-                    } else {
-                        button.classList.add('bg-red-400');
-                        setTimeout(() => {
-                            button.classList.remove('bg-red-400');
-                        }, 1000);
+                        button.classList.add('bg-green-500');
                     }
                 });
             }
         });
-    
+
         if (!foundCorrectAnswer) {
-            buttons.forEach(button => {
-                button.classList.add('bg-red-400');
-                setTimeout(() => {
-                    button.classList.remove('bg-red-400');
-                }, 1000);
-            });
+            buttons.forEach((element) => {
+                console.log(element, 'que es?');
+                if (element.textContent === answer.target.textContent.trim()){
+                    element.classList.add('bg-red-400')
+                }
+            })
         }
     }
-    
-    
-    
+
+
+
+
 
 }

@@ -11,7 +11,7 @@
 
             <wc-button-answer :questions="answersQuiz[currentIndex].question"
                 :answers="answersQuiz[currentIndex].answers" @answer-selected="captureAnswers" :counter="counter"
-                :selected-answer="selectedAnswer" />
+                :selected-answer="selectedAnswer" :disabled="disabled"/>
 
         </div>
 

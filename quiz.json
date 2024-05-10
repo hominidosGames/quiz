@@ -57,9 +57,7 @@
                 "correct": 0
             }
         ],
-
         "108": [
-
             {
                 "category": "2",
                 "question": "¿Cuál es el nombre del personaje principal interpretado por Marlon Brando en la película 'El Padrino'?",
@@ -116,8 +114,6 @@
                 "correct": 0
             }
         ],
-
-
         "109": [
             {
                 "category": "2",
@@ -1374,516 +1370,117 @@
         ],
         "131": [
             {
-                "category": "7",
-                "question": "¿Quién escribió 'Don Quijote de la Mancha'?",
+                "category": "Cine",
+                "question": "¿Quién dirigió la película 'El Padrino'?",
                 "answers": [
-                    "Miguel de Cervantes",
-                    "Federico García Lorca",
-                    "Gabriel García Márquez",
-                    "Pablo Neruda"
+                    "Francis Ford Coppola",
+                    "Martin Scorsese",
+                    "Steven Spielberg",
+                    "Alfred Hitchcock"
                 ],
                 "correct": 0
             },
             {
-                "category": "7",
-                "question": "¿Cuál es la obra más conocida de William Shakespeare?",
+                "category": "Cine",
+                "question": "¿Cuál es la película con más premios Oscar en la historia del cine?",
                 "answers": [
-                    "Hamlet",
-                    "Romeo y Julieta",
-                    "Macbeth",
-                    "Otelo"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'Cien años de soledad'?",
-                "answers": [
-                    "Gabriel García Márquez",
-                    "Mario Vargas Llosa",
-                    "Julio Cortázar",
-                    "Isabel Allende"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Qué escritor es conocido por sus obras de ciencia ficción como '1984'?",
-                "answers": [
-                    "Aldous Huxley",
-                    "Isaac Asimov",
-                    "George Orwell",
-                    "Philip K. Dick"
+                    "Titanic",
+                    "Ben-Hur",
+                    "El Señor de los Anillos: El Retorno del Rey",
+                    "La La Land"
                 ],
                 "correct": 2
             },
             {
-                "category": "7",
-                "question": "¿Quién escribió 'El principito'?",
+                "category": "Cine",
+                "question": "¿Quién interpretó a Batman en la trilogía de 'El Caballero de la Noche'?",
                 "answers": [
-                    "Antoine de Saint-Exupéry",
-                    "Jorge Luis Borges",
-                    "Paulo Coelho",
-                    "Franz Kafka"
+                    "Christian Bale",
+                    "Robert Downey Jr.",
+                    "Ben Affleck",
+                    "Michael Keaton"
                 ],
                 "correct": 0
+            },
+            {
+                "category": "Cine",
+                "question": "¿Qué película ganó el premio a la Mejor Película en los Premios Óscar de 2020?",
+                "answers": [
+                    "1917",
+                    "Parásitos",
+                    "Joker",
+                    "El irlandés"
+                ],
+                "correct": 1
+            },
+            {
+                "category": "Cine",
+                "question": "¿Quién dirigió la película 'El Club de la Lucha'?",
+                "answers": [
+                    "Christopher Nolan",
+                    "Quentin Tarantino",
+                    "David Fincher",
+                    "Stanley Kubrick"
+                ],
+                "correct": 2
             }
         ],
         "132": [
             {
-                "category": "7",
-                "question": "¿Quién escribió 'Don Quijote de la Mancha'?",
-                "answers": [
-                    "Miguel de Cervantes",
-                    "Federico García Lorca",
-                    "Gabriel García Márquez",
-                    "Pablo Neruda"
-                ],
-                "correct": 0
+              "category": "Cine",
+              "question": "¿Quién interpretó a James Bond en la película 'Skyfall'?",
+              "answers": [
+                "Daniel Craig",
+                "Pierce Brosnan",
+                "Sean Connery",
+                "Roger Moore"
+              ],
+              "correct": 0
             },
             {
-                "category": "7",
-                "question": "¿Cuál es la obra más conocida de William Shakespeare?",
-                "answers": [
-                    "Hamlet",
-                    "Romeo y Julieta",
-                    "Macbeth",
-                    "Otelo"
-                ],
-                "correct": 0
+              "category": "Cine",
+              "question": "¿Cuál es la película más taquillera de todos los tiempos?",
+              "answers": [
+                "Avengers: Endgame",
+                "Avatar",
+                "Titanic",
+                "Star Wars: El despertar de la Fuerza"
+              ],
+              "correct": 0
             },
             {
-                "category": "7",
-                "question": "¿Quién escribió 'Cien años de soledad'?",
-                "answers": [
-                    "Gabriel García Márquez",
-                    "Mario Vargas Llosa",
-                    "Julio Cortázar",
-                    "Isabel Allende"
-                ],
-                "correct": 0
+              "category": "Cine",
+              "question": "¿Quién dirigió la película 'La La Land'?",
+              "answers": [
+                "Christopher Nolan",
+                "Martin Scorsese",
+                "Quentin Tarantino",
+                "Damien Chazelle"
+              ],
+              "correct": 3
             },
             {
-                "category": "7",
-                "question": "¿Qué escritor es conocido por sus obras de ciencia ficción como '1984'?",
-                "answers": [
-                    "Aldous Huxley",
-                    "Isaac Asimov",
-                    "George Orwell",
-                    "Philip K. Dick"
-                ],
-                "correct": 2
+              "category": "Cine",
+              "question": "¿Cuál de las siguientes películas ganó el premio a la Mejor Película en los Premios Óscar de 2019?",
+              "answers": [
+                "Green Book",
+                "Bohemian Rhapsody",
+                "Roma",
+                "La favorita"
+              ],
+              "correct": 0
             },
             {
-                "category": "7",
-                "question": "¿Quién escribió 'El principito'?",
-                "answers": [
-                    "Antoine de Saint-Exupéry",
-                    "Jorge Luis Borges",
-                    "Paulo Coelho",
-                    "Franz Kafka"
-                ],
-                "correct": 0
+              "category": "Cine",
+              "question": "¿Quién interpretó a Joker en la película homónima de 2019?",
+              "answers": [
+                "Joaquin Phoenix",
+                "Heath Ledger",
+                "Jared Leto",
+                "Jack Nicholson"
+              ],
+              "correct": 0
             }
-        ],
-        "133": [
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'Don Quijote de la Mancha'?",
-                "answers": [
-                    "Miguel de Cervantes",
-                    "Federico García Lorca",
-                    "Gabriel García Márquez",
-                    "Pablo Neruda"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Cuál es la obra más conocida de William Shakespeare?",
-                "answers": [
-                    "Hamlet",
-                    "Romeo y Julieta",
-                    "Macbeth",
-                    "Otelo"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'Cien años de soledad'?",
-                "answers": [
-                    "Gabriel García Márquez",
-                    "Mario Vargas Llosa",
-                    "Julio Cortázar",
-                    "Isabel Allende"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Qué escritor es conocido por sus obras de ciencia ficción como '1984'?",
-                "answers": [
-                    "Aldous Huxley",
-                    "Isaac Asimov",
-                    "George Orwell",
-                    "Philip K. Dick"
-                ],
-                "correct": 2
-            },
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'El principito'?",
-                "answers": [
-                    "Antoine de Saint-Exupéry",
-                    "Jorge Luis Borges",
-                    "Paulo Coelho",
-                    "Franz Kafka"
-                ],
-                "correct": 0
-            }
-        ],
-        "134": [
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'Don Quijote de la Mancha'?",
-                "answers": [
-                    "Miguel de Cervantes",
-                    "Federico García Lorca",
-                    "Gabriel García Márquez",
-                    "Pablo Neruda"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Cuál es la obra más conocida de William Shakespeare?",
-                "answers": [
-                    "Hamlet",
-                    "Romeo y Julieta",
-                    "Macbeth",
-                    "Otelo"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'Cien años de soledad'?",
-                "answers": [
-                    "Gabriel García Márquez",
-                    "Mario Vargas Llosa",
-                    "Julio Cortázar",
-                    "Isabel Allende"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Qué escritor es conocido por sus obras de ciencia ficción como '1984'?",
-                "answers": [
-                    "Aldous Huxley",
-                    "Isaac Asimov",
-                    "George Orwell",
-                    "Philip K. Dick"
-                ],
-                "correct": 2
-            },
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'El principito'?",
-                "answers": [
-                    "Antoine de Saint-Exupéry",
-                    "Jorge Luis Borges",
-                    "Paulo Coelho",
-                    "Franz Kafka"
-                ],
-                "correct": 0
-            }
-        ],
-        "135": [
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'Don Quijote de la Mancha'?",
-                "answers": [
-                    "Miguel de Cervantes",
-                    "Federico García Lorca",
-                    "Gabriel García Márquez",
-                    "Pablo Neruda"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Cuál es la obra más conocida de William Shakespeare?",
-                "answers": [
-                    "Hamlet",
-                    "Romeo y Julieta",
-                    "Macbeth",
-                    "Otelo"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'Cien años de soledad'?",
-                "answers": [
-                    "Gabriel García Márquez",
-                    "Mario Vargas Llosa",
-                    "Julio Cortázar",
-                    "Isabel Allende"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Qué escritor es conocido por sus obras de ciencia ficción como '1984'?",
-                "answers": [
-                    "Aldous Huxley",
-                    "Isaac Asimov",
-                    "George Orwell",
-                    "Philip K. Dick"
-                ],
-                "correct": 2
-            },
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'El principito'?",
-                "answers": [
-                    "Antoine de Saint-Exupéry",
-                    "Jorge Luis Borges",
-                    "Paulo Coelho",
-                    "Franz Kafka"
-                ],
-                "correct": 0
-            }
-        ],
-        "136": [
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'Don Quijote de la Mancha'?",
-                "answers": [
-                    "Miguel de Cervantes",
-                    "Federico García Lorca",
-                    "Gabriel García Márquez",
-                    "Pablo Neruda"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Cuál es la obra más conocida de William Shakespeare?",
-                "answers": [
-                    "Hamlet",
-                    "Romeo y Julieta",
-                    "Macbeth",
-                    "Otelo"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'Cien años de soledad'?",
-                "answers": [
-                    "Gabriel García Márquez",
-                    "Mario Vargas Llosa",
-                    "Julio Cortázar",
-                    "Isabel Allende"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Qué escritor es conocido por sus obras de ciencia ficción como '1984'?",
-                "answers": [
-                    "Aldous Huxley",
-                    "Isaac Asimov",
-                    "George Orwell",
-                    "Philip K. Dick"
-                ],
-                "correct": 2
-            },
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'El principito'?",
-                "answers": [
-                    "Antoine de Saint-Exupéry",
-                    "Jorge Luis Borges",
-                    "Paulo Coelho",
-                    "Franz Kafka"
-                ],
-                "correct": 0
-            }
-        ],
-        "137": [
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'Don Quijote de la Mancha'?",
-                "answers": [
-                    "Miguel de Cervantes",
-                    "Federico García Lorca",
-                    "Gabriel García Márquez",
-                    "Pablo Neruda"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Cuál es la obra más conocida de William Shakespeare?",
-                "answers": [
-                    "Hamlet",
-                    "Romeo y Julieta",
-                    "Macbeth",
-                    "Otelo"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'Cien años de soledad'?",
-                "answers": [
-                    "Gabriel García Márquez",
-                    "Mario Vargas Llosa",
-                    "Julio Cortázar",
-                    "Isabel Allende"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Qué escritor es conocido por sus obras de ciencia ficción como '1984'?",
-                "answers": [
-                    "Aldous Huxley",
-                    "Isaac Asimov",
-                    "George Orwell",
-                    "Philip K. Dick"
-                ],
-                "correct": 2
-            },
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'El principito'?",
-                "answers": [
-                    "Antoine de Saint-Exupéry",
-                    "Jorge Luis Borges",
-                    "Paulo Coelho",
-                    "Franz Kafka"
-                ],
-                "correct": 0
-            }
-        ],
-        "138": [
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'Don Quijote de la Mancha'?",
-                "answers": [
-                    "Miguel de Cervantes",
-                    "Federico García Lorca",
-                    "Gabriel García Márquez",
-                    "Pablo Neruda"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Cuál es la obra más conocida de William Shakespeare?",
-                "answers": [
-                    "Hamlet",
-                    "Romeo y Julieta",
-                    "Macbeth",
-                    "Otelo"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'Cien años de soledad'?",
-                "answers": [
-                    "Gabriel García Márquez",
-                    "Mario Vargas Llosa",
-                    "Julio Cortázar",
-                    "Isabel Allende"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Qué escritor es conocido por sus obras de ciencia ficción como '1984'?",
-                "answers": [
-                    "Aldous Huxley",
-                    "Isaac Asimov",
-                    "George Orwell",
-                    "Philip K. Dick"
-                ],
-                "correct": 2
-            },
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'El principito'?",
-                "answers": [
-                    "Antoine de Saint-Exupéry",
-                    "Jorge Luis Borges",
-                    "Paulo Coelho",
-                    "Franz Kafka"
-                ],
-                "correct": 0
-            }
-        ],
-        "139": [
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'Don Quijote de la Mancha'?",
-                "answers": [
-                    "Miguel de Cervantes",
-                    "Federico García Lorca",
-                    "Gabriel García Márquez",
-                    "Pablo Neruda"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Cuál es la obra más conocida de William Shakespeare?",
-                "answers": [
-                    "Hamlet",
-                    "Romeo y Julieta",
-                    "Macbeth",
-                    "Otelo"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'Cien años de soledad'?",
-                "answers": [
-                    "Gabriel García Márquez",
-                    "Mario Vargas Llosa",
-                    "Julio Cortázar",
-                    "Isabel Allende"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "7",
-                "question": "¿Qué escritor es conocido por sus obras de ciencia ficción como '1984'?",
-                "answers": [
-                    "Aldous Huxley",
-                    "Isaac Asimov",
-                    "George Orwell",
-                    "Philip K. Dick"
-                ],
-                "correct": 2
-            },
-            {
-                "category": "7",
-                "question": "¿Quién escribió 'El principito'?",
-                "answers": [
-                    "Antoine de Saint-Exupéry",
-                    "Jorge Luis Borges",
-                    "Paulo Coelho",
-                    "Franz Kafka"
-                ],
-                "correct": 0
-            }
-        ]
+          ]
     }
 }

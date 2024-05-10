@@ -19,6 +19,7 @@ export default defineComponent({
             selectedAnswer: null,
             showQuestion: true,
             showAnswers: false,
+            disabled: false
         };
     },
     props: {
@@ -27,33 +28,35 @@ export default defineComponent({
 
     mounted() {
 
-        this.startGame = new Manager(this)
-        this.startGame.initGame()
+        this.startGame = new Manager(this);
+        this.startGame.initGame();
         this.startTimeout();
-
+        
     },
     methods: {
 
         captureAnswers(event) {
+            if(event){
+                this.disabled  = true
+            }
             this.selectedAnswer = event.target.textContent
-            this.paintColor(event);
+            this.paintColorQuestions(event);
             setTimeout(() => {
                 this.nextQuestion(event);
             }, 1000);
             this.counter++;
-            // this.nextQuestion(event);
         },
 
         nextQuestion(event) {
             if (this.currentIndex < this.answersQuiz.length - 1) {
+                this.disabled  = false
                 this.currentIndex++;
                 this.showQuestion = true;
                 this.showAnswers = false;
                 this.startTimeout();
-                this.counter = 0
-
+                this.counter = 0;
             }
-            this.startGame.arrayAnswers(this.selectedAnswer)
+            this.startGame.arrayAnswers(this.selectedAnswer);
 
         },
 
@@ -61,14 +64,12 @@ export default defineComponent({
             setTimeout(() => {
                 this.showQuestion = false;
                 this.showAnswers = true;
-            }, 1000);
+            }, 3000);
         },
 
 
-        paintColor(answer){
-
-            this.startGame.paintColor(answer)
-        
+        paintColorQuestions(answer){
+            this.startGame.paintColorQuestions(answer);
         }
 
 
