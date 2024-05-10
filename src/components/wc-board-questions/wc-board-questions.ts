@@ -1,7 +1,7 @@
 
 import wcButtonAnswer from '../wc-button-answers/wc-button-answer.vue'
 import { defineComponent } from 'vue';
-import { Manager } from '../class/Manager'
+import { Manager } from '../../class/Manager'
 import { Helper } from '@/Helper';
 
 export default defineComponent({

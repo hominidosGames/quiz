@@ -1,7 +1,7 @@
 
 import { defineComponent } from 'vue';
-import routes from '../router/index';
-import { Results } from '../class/Results'
+import routes from '../../router/index';
+import { Results } from '../../class/Results'
 
 export default defineComponent({
     name: 'wc-board-results',
