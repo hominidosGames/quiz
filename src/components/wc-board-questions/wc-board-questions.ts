@@ -1,7 +1,6 @@
-
-import wcButtonAnswer from '../wc-button-answers/wc-button-answer.vue'
+import wcButtonAnswer from '../wc-button-answers/wc-button-answer.vue';
 import { defineComponent } from 'vue';
-import { Manager } from '../../class/Manager'
+import { Manager } from '../../class/Manager';
 import { Helper } from '@/Helper';
 
 export default defineComponent({
@@ -9,7 +8,6 @@ export default defineComponent({
     components: {
         'wc-button-answer': wcButtonAnswer
     },
-
 
     data() {
         return {
@@ -67,11 +65,9 @@ export default defineComponent({
             }, 3000);
         },
 
-
         paintColorQuestions(answer){
             this.startGame.paintColorQuestions(answer);
         }
-
 
 
     }

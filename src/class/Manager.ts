@@ -21,7 +21,6 @@ export class Manager {
         this.game.initTimer();
     }
 
-
     public arrayAnswers(answer: string) {
         this.arrayAnswersUser.push(answer)
         let arrayTrueOptions = Helper.trueAnswersDay()
@@ -40,7 +39,6 @@ export class Manager {
         }
     }
 
-
     public compareArrays(arrayUser: Array<string>, arrayTrueOptions: Array<any>): Array<string> {
         let arraySuccesses: Array<string> = []
         arrayUser.forEach((element) => {
@@ -52,7 +50,6 @@ export class Manager {
         })
         return arraySuccesses
     }
-
 
 
     public paintColorQuestions(answer: any) {
@@ -81,9 +78,4 @@ export class Manager {
             })
         }
     }
-
-
-
-
-
-}
+} 
