@@ -18,7 +18,7 @@ export class Manager {
     public initGame() {
         this.game = new Game(this);
         this.component.answersQuiz = this.game.searchQuestion();
-        this.game.initTimer();
+        //this.game.initTimer();
     }
 
     public arrayAnswers(answer: string) {

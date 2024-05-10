@@ -16,7 +16,7 @@
  </div>
  <!-- hover:text-white hover:border-yellow-500 focus:outline-none focus:bg-yellow-500 focus:text-white -->
    <figure class="fixed bottom-0 mb-5 mt-2 left-1/2 transform -translate-x-1/2">
-     <img src="../../public/logo-literatura.jpg" alt="" class="w-16 h-16 rounded-full">
+     <img src="../../../public/logo-literatura.jpg" alt="" class="w-16 h-16 rounded-full">
    </figure>
 
  </div>

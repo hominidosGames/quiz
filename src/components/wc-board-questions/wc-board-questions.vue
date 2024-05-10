@@ -19,4 +19,4 @@
     
     </template>
     
-    <script src="./wc-board-questions"></script> 
+    <script src="./wc-board-questions"></script>
