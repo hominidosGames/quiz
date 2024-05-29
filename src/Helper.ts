@@ -1,4 +1,4 @@
-import mookJson from '../../quiz/quiz.json'
+import mookJson from '../../quiz/quiz.json';
 
 export class Helper {
     static getDay() {

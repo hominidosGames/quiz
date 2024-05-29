@@ -1,81 +1,114 @@
-import { Game } from '@/class/Game';
 import { Helper } from '@/Helper';
 import routes from '../router/index';
+import mookJson from '../../quiz.json';
+import { Timer } from './Timer';
+import { Result } from '@/types/Result';
 import { Answer } from '@/types/Question';
 
 export class Manager {
 
-    private component: any;
-    private game: Game | null;
-    private arrayAnswersUser: any[];
+    private board: any;
+    private questionsDay: Answer[];
+    private numActualQuestion: number;
+    private timer: Timer;
+    private results: Result[];
 
-    constructor(component: any) {
-        this.component = component
-        this.game = null;
-        this.arrayAnswersUser = [];
+    constructor(board: any) {
+        this.board = board;
+        this.questionsDay = mookJson.questions[Helper.getDay()];
+        this.numActualQuestion = 0;
+        this.timer = new Timer(100);
+        this.results = [];
     }
 
     public initGame() {
-        this.game = new Game(this);
-        this.component.answersQuiz = this.game.searchQuestion();
-        //this.game.initTimer();
+        this.printQuestion();
+        this.printAnswers();
+
+        setTimeout(() => { this.showAnswers(); }, 500);
+        setTimeout(() => { this.initTimer(); }, 4000);
     }
 
-    public arrayAnswers(answer: string) {
-        this.arrayAnswersUser.push(answer)
-        let arrayTrueOptions = Helper.trueAnswersDay()
+    public checkAnswer(indexRes: number, button) {
+        let isCorrect = false;
 
-        if (this.arrayAnswersUser.length === 5) {
-            let arrayCompared = this.compareArrays(this.arrayAnswersUser, arrayTrueOptions);
-            const arrayComparedString = JSON.stringify(arrayCompared);
-            const arrayTrueOptionsString = JSON.stringify(arrayTrueOptions);
-            routes.push({
-                path: '/tabs/tab2',
-                query: {
-                    key: arrayComparedString,
-                    keyTwo: arrayTrueOptionsString
-                }
-            });
-        }
+        if (indexRes == this.questionsDay[this.numActualQuestion].correct)
+            isCorrect = true;
+
+        this.finishRound(isCorrect, indexRes, button);
     }
 
-    public compareArrays(arrayUser: Array<string>, arrayTrueOptions: Array<any>): Array<string> {
-        let arraySuccesses: Array<string> = []
-        arrayUser.forEach((element) => {
-            arrayTrueOptions.forEach((elemenTrue) => {
-                if (element == elemenTrue.response) {
-                    arraySuccesses.push(elemenTrue)
-                }
-            })
-        })
-        return arraySuccesses
+    public initTimer() {
+        this.timer.init();
     }
 
+    public stopTimer() {
+        this.timer.stopTimer();
+    }
 
-    public paintColorQuestions(answer: any) {
-        const buttons = document.querySelectorAll('.button-answer');
-        let foundCorrectAnswer = false;
-        let questionDay = Helper.trueAnswersDay();
+    public resetTimer() {
+        this.timer.resetTimer();
+    }
 
-        questionDay.forEach((element) => {
-            const trimmedResponse = element.response.trim();
-            if (trimmedResponse === answer.target.textContent.trim()) {
-                foundCorrectAnswer = true;
-                buttons.forEach(button => {
-                    if (button.textContent === answer.target.textContent.trim()) {
-                        button.classList.add('bg-green-500');
-                    }
-                });
+    private finishRound(isCorrect: boolean, indexRes: number, button: any) {
+        this.stopTimer();
+
+        this.results.push({
+            question: this.questionsDay[this.numActualQuestion].question,
+            response: this.questionsDay[this.numActualQuestion].answers[indexRes]
+        });
+        this.numActualQuestion++;
+
+        button && isCorrect ? button.classList.add("isCorrect") : button.classList.add("isInCorrect");
+
+        // Animacion final y siguiente ronda
+        setTimeout(() => {
+            this.hiddenAnswer();
+            button.classList.remove("isInCorrect");
+            button.classList.remove("isCorrect");
+            this.shakePanelQuestion();
+            this.numActualQuestion < this.questionsDay.length ? this.nextRound() : this.goToFinalResult();
+        }, 3500);
+    }
+
+    private goToFinalResult() {
+        routes.push({
+            path: '/tabs/tab2',
+            query: {
+                key: JSON.stringify(this.results),
+                keyTwo: JSON.stringify(this.questionsDay.map(ele => {
+                    return { question: ele.question, response: ele.answers[ele.correct] }
+                }))
             }
         });
+    }
 
-        if (!foundCorrectAnswer) {
-            buttons.forEach((element) => {
-                console.log(element, 'que es?');
-                if (element.textContent === answer.target.textContent.trim()){
-                    element.classList.add('bg-red-400')
-                }
-            })
-        }
+    private nextRound() {
+        this.printQuestion();
+        this.printAnswers();
+        this.resetTimer();
+        setTimeout(() => { this.showAnswers(); }, 500);
+        setTimeout(() => { this.initTimer(); }, 4000);
+    }
+
+    private printQuestion() {
+        this.board.question = this.questionsDay[this.numActualQuestion].question;
+    }
+
+    private printAnswers() {
+        this.board.answers = this.questionsDay[this.numActualQuestion].answers;
+    }
+
+    private showAnswers() {
+        document.querySelectorAll(".button-answer-inner").forEach(ele => ele.classList.add("button-flip"));
+    }
+
+    private hiddenAnswer() {
+        document.querySelectorAll(".button-answer-inner").forEach(ele => ele.classList.remove("button-flip"));
+    }
+
+    private shakePanelQuestion() {
+        document.getElementsByClassName("board-question")[0].classList.remove("animationShake");
+        document.getElementsByClassName("board-question")[0].classList.add("animationShake");
     }
 } 

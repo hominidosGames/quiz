@@ -37,6 +37,10 @@
 
 .button-main-menu {
     z-index: 2;
+    box-shadow:
+    0 0 3px 1.5px #fff, 
+    0 0 5px 3px yellow,
+    0 0 7px 4.5px yellow;
 }
 
 .logo-main-menu {
