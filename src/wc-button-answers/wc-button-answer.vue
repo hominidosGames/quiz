@@ -2,7 +2,7 @@
   <div class="p-2 flex justify-center flex-col items-center h-screen bg-green-400">
 
     <div
-      class="w-95vw h-auto min-h-10rem flex justify-center items-center fixed top-25 m-5 p-5 text-white border border-black sm:w-4/5 md:w-1/2 text-sm py-2.5 mb-10 rounded-lg font-mono bg-green-200 shadow-lg hover:shadow-lg">
+      class="w-95vw h-auto min-h-15rem flex justify-center items-center fixed top-15 m-5 p-5 text-white border border-black sm:w-4/5 md:w-1/2 text-sm py-2.5 mb-10 rounded-lg font-mono bg-green-200 shadow-lg hover:shadow-lg">
       <p class="text-center text-black font-mono text-sm">
         {{ questions }}
       </p>

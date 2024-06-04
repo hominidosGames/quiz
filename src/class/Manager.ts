@@ -1,7 +1,7 @@
 import { Game } from '@/class/Game';
 import { Helper } from '@/Helper';
 import routes from '../router/index';
-import { Answer } from '@/types/Question';
+import { Firebase } from '../class/Firebase'
 
 export class Manager {
 
@@ -13,18 +13,33 @@ export class Manager {
         this.component = component
         this.game = null;
         this.arrayAnswersUser = [];
+
     }
 
     public initGame() {
         this.game = new Game(this);
-        this.component.answersQuiz = this.game.searchQuestion();
+        this.questionDayCategory();
         this.game.initTimer();
+    }
+
+    public questionDayCategory() {
+
+        Helper.questionsDayFirebase()
+        .then((questions) => {
+            this.component.answersQuiz = questions
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+
     }
 
 
     public arrayAnswers(answer: string) {
         this.arrayAnswersUser.push(answer)
         let arrayTrueOptions = Helper.trueAnswersDay()
+        console.log(arrayTrueOptions,'true');
+        
 
         if (this.arrayAnswersUser.length === 5) {
             let arrayCompared = this.compareArrays(this.arrayAnswersUser, arrayTrueOptions);
@@ -39,6 +54,7 @@ export class Manager {
             });
         }
     }
+
 
 
     public compareArrays(arrayUser: Array<string>, arrayTrueOptions: Array<any>): Array<string> {
@@ -66,7 +82,8 @@ export class Manager {
                 foundCorrectAnswer = true;
                 buttons.forEach(button => {
                     if (button.textContent === answer.target.textContent.trim()) {
-                        button.classList.add('bg-green-500');
+                        button.classList.remove('bg-yellow-400');
+                        button.classList.add('bg-green-600');
                     }
                 });
             }
@@ -74,9 +91,9 @@ export class Manager {
 
         if (!foundCorrectAnswer) {
             buttons.forEach((element) => {
-                console.log(element, 'que es?');
-                if (element.textContent === answer.target.textContent.trim()){
-                    element.classList.add('bg-red-400')
+                if (element.textContent === answer.target.textContent.trim()) {
+                    element.classList.remove('bg-yellow-400');
+                    element.classList.add('bg-red-500')
                 }
             })
         }

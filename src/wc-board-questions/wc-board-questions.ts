@@ -36,11 +36,12 @@ export default defineComponent({
     methods: {
 
         captureAnswers(event) {
+            this.paintColorQuestions(event);
             if(event){
                 this.disabled  = true
             }
             this.selectedAnswer = event.target.textContent
-            this.paintColorQuestions(event);
+            
             setTimeout(() => {
                 this.nextQuestion(event);
             }, 1000);

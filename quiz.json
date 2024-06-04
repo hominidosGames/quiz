@@ -1481,6 +1481,120 @@
               ],
               "correct": 0
             }
+          ],
+          "133": [
+            {
+              "category": "Cine",
+              "question": "¿Quién interpretó a James Bond en la película 'Skyfall'?",
+              "answers": [
+                "Daniel Craig",
+                "Pierce Brosnan",
+                "Sean Connery",
+                "Roger Moore"
+              ],
+              "correct": 0
+            },
+            {
+              "category": "Cine",
+              "question": "¿Cuál es la película más taquillera de todos los tiempos?",
+              "answers": [
+                "Avengers: Endgame",
+                "Avatar",
+                "Titanic",
+                "Star Wars: El despertar de la Fuerza"
+              ],
+              "correct": 0
+            },
+            {
+              "category": "Cine",
+              "question": "¿Quién dirigió la película 'La La Land'?",
+              "answers": [
+                "Christopher Nolan",
+                "Martin Scorsese",
+                "Quentin Tarantino",
+                "Damien Chazelle"
+              ],
+              "correct": 3
+            },
+            {
+              "category": "Cine",
+              "question": "¿Cuál de las siguientes películas ganó el premio a la Mejor Película en los Premios Óscar de 2019?",
+              "answers": [
+                "Green Book",
+                "Bohemian Rhapsody",
+                "Roma",
+                "La favorita"
+              ],
+              "correct": 0
+            },
+            {
+              "category": "Cine",
+              "question": "¿Quién interpretó a Joker en la película homónima de 2019?",
+              "answers": [
+                "Joaquin Phoenix",
+                "Heath Ledger",
+                "Jared Leto",
+                "Jack Nicholson"
+              ],
+              "correct": 0
+            }
+          ],
+          "134": [
+            {
+              "category": "Cine",
+              "question": "¿Quién interpretó a James Bond en la película 'Skyfall'?",
+              "answers": [
+                "Daniel Craig",
+                "Pierce Brosnan",
+                "Sean Connery",
+                "Roger Moore"
+              ],
+              "correct": 0
+            },
+            {
+              "category": "Cine",
+              "question": "¿Cuál es la película más taquillera de todos los tiempos?",
+              "answers": [
+                "Avengers: Endgame",
+                "Avatar",
+                "Titanic",
+                "Star Wars: El despertar de la Fuerza"
+              ],
+              "correct": 0
+            },
+            {
+              "category": "Cine",
+              "question": "¿Quién dirigió la película 'La La Land'?",
+              "answers": [
+                "Christopher Nolan",
+                "Martin Scorsese",
+                "Quentin Tarantino",
+                "Damien Chazelle"
+              ],
+              "correct": 3
+            },
+            {
+              "category": "Cine",
+              "question": "¿Cuál de las siguientes películas ganó el premio a la Mejor Película en los Premios Óscar de 2019?",
+              "answers": [
+                "Green Book",
+                "Bohemian Rhapsody",
+                "Roma",
+                "La favorita"
+              ],
+              "correct": 0
+            },
+            {
+              "category": "Cine",
+              "question": "¿Quién interpretó a Joker en la película homónima de 2019?",
+              "answers": [
+                "Joaquin Phoenix",
+                "Heath Ledger",
+                "Jared Leto",
+                "Jack Nicholson"
+              ],
+              "correct": 0
+            }
           ]
     }
 }
