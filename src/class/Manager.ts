@@ -13,10 +13,10 @@ export class Manager {
     private timer: Timer;
     private results: Result[];
 
-    constructor(component: any) {
-        this.component = component
-        this.game = null;
-        this.arrayAnswersUser = [];
+    // constructor(component: any) {
+    //     this.component = component
+    //     this.game = null;
+    //     this.arrayAnswersUser = [];
 
     constructor(board: any) {
         this.board = board;
