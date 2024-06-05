@@ -5,12 +5,10 @@ export class Timer {
 
     private totalTime: number;
     private actualTime: number;
-    private component?: any;
     private isInit: boolean;
 
-    constructor(totalTime: number, component?: any) {
+    constructor(totalTime: number) {
         this.totalTime = totalTime;
-        this.component = component;
         this.actualTime = this.totalTime;
         this.isInit = false;
     }
@@ -18,6 +16,15 @@ export class Timer {
     public init() {
         this.isInit = true;
         this.countdown();
+    }
+
+    public stopTimer() {
+        this.isInit = false;
+    }
+
+    public resetTimer() {
+        this.actualTime = this.totalTime;
+        Helper.dispatch("timer-reset", {});
     }
 
     private countdown() {
@@ -32,4 +39,5 @@ export class Timer {
             Helper.dispatch("timer-finish", {});
         }
     }
+    
 }

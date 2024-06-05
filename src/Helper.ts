@@ -1,5 +1,4 @@
-import mookJson from '../../quiz/quiz.json'
-import { Firebase } from './class/Firebase';
+import mookJson from '../../quiz/quiz.json';
 
 export class Helper {
     static getDay() {

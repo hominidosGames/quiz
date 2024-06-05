@@ -13,7 +13,11 @@ export default defineComponent({
     },
     methods: {
         goToGame(){
-            routes.push({ path: '/tabs/' });
+            this.$refs.foco1.classList.add("hiddenLight1");
+            this.$refs.foco2.classList.add("hiddenLight2");
+            setTimeout(() => {
+               routes.push({ path: '/tabs/' });
+            }, 1000);
         },
 
         goToOptions(){
