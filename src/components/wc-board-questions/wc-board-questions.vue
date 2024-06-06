@@ -1,20 +1,19 @@
 <template>
 
-    <div
-        class="wrapper-board-question bg-center bg-no-repeat bg-cover bg-top h-screen flex justify-center flex-col items-center">
+    <div class="wrapper-board-question bg-center bg-no-repeat bg-cover bg-top flex flex-col items-center">
         <!-- Timer -->
-        <wc-timer-bar></wc-timer-bar>
+       <!-- <wc-timer-bar></wc-timer-bar>-->
 
         <!--Panel pregunta-->
         <div ref="panelQuestion"
-            class="board-question w-95vw h-auto min-h-10rem flex justify-center items-center fixed top-25 m-5 p-5 border border-black sm:w-4/5 md:w-1/2 text-sm py-2.5 mb-10 rounded-lg font-mono bg-purple-900 shadow-lg hover:shadow-lg">
+            class="board-question w-95vw h-auto min-h-10rem flex justify-center items-center border border-black  text-sm rounded-lg font-mono bg-purple-700 shadow-lg hover:shadow-lg">
             <p class="text-center">
                 {{ question }}
             </p>
         </div>
 
         <!--Botones-->
-        <div class="flex justify-center flex-col items-center w-screen m-5 mt-40">
+        <div class="flex justify-center flex-col items-center w-screen">
             <div class="button-answer" v-for="(answer, index) in answers" :key="index">
                 <div class="button-answer-inner" :id="'button-answer-' + (index + 1)"
                     :ref="'buttonAnswer' + (index + 1)">
@@ -41,8 +40,9 @@
 
 <style>
 .wrapper-board-question {
-    
+    height: 100%;
     color: white;
+    padding: 50px;
 }
 
 .board-question {
@@ -50,6 +50,7 @@
         0 0 3px 1.5px #fff,
         0 0 5px 3px yellow,
         0 0 7px 4.5px yellow;
+    margin-bottom: 50px
 }
 
 .red {
@@ -283,6 +284,7 @@
     height: 100%;
     background-color: rgb(135, 46, 217);
     z-index: -1;
+    top: -50px
 }
 
 /* Animaciones en diagonal */

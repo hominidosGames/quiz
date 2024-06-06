@@ -25,6 +25,10 @@ export class SoundMaster {
         });
     }
 
+    public playDelay(titleSound: string, timeDelay: number) {
+        setTimeout(() => this.play(titleSound), timeDelay)
+    }
+
     public stop(titleSound: string) {
         NativeAudio.stop({
             assetId: titleSound,
