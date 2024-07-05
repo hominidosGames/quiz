@@ -4,6 +4,7 @@ import mookJson from '../../quiz.json';
 import { Timer } from './Timer';
 import { Result } from '@/types/Result';
 import { Answer } from '@/types/Question';
+import { SoundMaster } from './SoundMaster';
 
 export class Manager {
 
@@ -12,6 +13,8 @@ export class Manager {
     private numActualQuestion: number;
     private timer: Timer;
     private results: Result[];
+    private soundMaster: SoundMaster;
+    private isFinishRound: boolean;
 
     constructor(board: any) {
         this.board = board;
@@ -19,6 +22,9 @@ export class Manager {
         this.numActualQuestion = 0;
         this.timer = new Timer(100);
         this.results = [];
+        this.soundMaster = new SoundMaster();
+        this.soundMaster.preload(['correct', 'error'])
+        this.isFinishRound = false;
     }
 
     public initGame() {
@@ -51,13 +57,17 @@ export class Manager {
     }
 
     private finishRound(isCorrect: boolean, indexRes: number, button: any) {
-        this.stopTimer();
+        if (this.isFinishRound) return ;
 
+        this.stopTimer();
+        this.isFinishRound = true;
         this.results.push({
             question: this.questionsDay[this.numActualQuestion].question,
             response: this.questionsDay[this.numActualQuestion].answers[indexRes]
         });
         this.numActualQuestion++;
+
+        isCorrect ? this.soundMaster.playDelay('correct', 1500) : this.soundMaster.playDelay('error', 1500);
 
         button && isCorrect ? button.classList.add("isCorrect") : button.classList.add("isInCorrect");
 
@@ -84,6 +94,7 @@ export class Manager {
     }
 
     private nextRound() {
+        this.isFinishRound = false;
         this.printQuestion();
         this.printAnswers();
         this.resetTimer();
