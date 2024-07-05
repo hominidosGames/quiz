@@ -1,45 +1,53 @@
 <template>
-    <div class="p-5 flex flex-col items-center bg-gradient-to-r bg-green-400 h-screen">
-        <div class="mb-15 mt-15">
-            <p class="text-black font-mono text-m mb-5 text-center">Respuestas acertadas</p>
-            <table class="w-full divide-y text-left text-sm">
-                <tbody>
-                    <tr v-for="(answer, index) in resultsTrue" :key="index"
-                        class="border border-neutral-200 text-black ">
-                        <td class="px-3 py-2 text-xs bg-yellow-400 font-mono">{{ answer.question }}</td>
-                        <td class="px-3 py-2 text-xs bg-yellow-400 font-mono">{{ answer.response }}</td>
+    <div class="p-5 flex flex-col items-center bg-gradient-to-r bg-purple-800 h-screen">
+        <div class="mt-15">
+            <p class="text-white font-mono text-m mb-5 text-center">Respuestas del día</p>
+            <table class="min-w-full divide-y divide-gray-200 mt-20 shadow-md">
+   
+                <tbody class="divide-y divide-gray-200">
+                    <tr v-for="(preguntaRespuesta, index) in totalResults" :key="index" class="hover:bg-gray-100">
+
+                        <td class="px-3 py-2 text-start text-xs text-white font-medium bg-purple-900 font-mono border-solid border-2 border-fuchsia-700"
+                            id="prueba">{{ preguntaRespuesta.question }}</td>
+                        <td class="px-3 py-2 text-start text-xs text-white font-medium bg-purple-900 font-mono border-solid border-2 border-fuchsia-700"
+                            id="prueba">{{ preguntaRespuesta.response }}</td>
                     </tr>
                 </tbody>
+
             </table>
+
         </div>
 
-        <div>
-            <p class="text-black font-mono text-m mb-5 text-center">Respuestas del día</p>
-            <table class="w-full divide-y text-left">
-                <tbody>
-                    <tr v-for="(preguntaRespuesta, index) in totalResults" :key="index"
-                        class="border border-neutral-200 text-black">
-                        <td class="px-3 py-2 text-xs bg-yellow-400 font-mono">{{ preguntaRespuesta.question }}</td>
-                        <td class="px-3 py-2 text-xs bg-yellow-400 font-mono">{{ preguntaRespuesta.response }}</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="m-10">
+            <button @click="verifyResponse"
+                class="py-2 px-4 bg-purple-900 hover:bg-purple-800 text-white rounded-md shadow-md font-mono board-question">Comprobar
+                respuestas</button>
         </div>
+
         <div class="m-40">
             <button @click="goToMenu"
-                class="px-4 py-2 bg-green-600 hover:bg-green-300 text-white rounded-md shadow-md font-mono">Menu
-                principal</button>
+                class="w-20 h-20 bg-purple-900 hover:bg-purple-700 text-white rounded-full shadow-md font-mono">
+                Menu
+            </button>
         </div>
 
 
-        <!-- <button class="fixed bottom-0 mb-5 mt-2 left-1/2 transform -translate-x-1/2">
-            <figure>
-                <img src="../../public/compatir.png" alt="" class="w-28 h-28 rounded-full " >
-            </figure>
-        </button> -->
+        <img class="base-main-menu" src="../../../assets/images/baseMainMenu.png" />
+
 
     </div>
 </template>
 
 
 <script src="./wc-board-results"></script>
+<style>
+
+
+.board-question {
+    box-shadow:
+        0 0 3px 1.5px #fff,
+        0 0 5px 3px yellow,
+        0 0 7px 4.5px yellow;
+}
+
+</style>

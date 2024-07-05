@@ -1,4 +1,3 @@
-import wcButtonAnswer from '../wc-button-answers/wc-button-answer.vue';
 import wcTimerBar from '../wc-timer-bar/wc-timer-bar.vue';
 import { defineComponent } from 'vue';
 import { Manager } from '../../class/Manager';

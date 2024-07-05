@@ -111,4 +111,8 @@ export class Manager {
         document.getElementsByClassName("board-question")[0].classList.remove("animationShake");
         document.getElementsByClassName("board-question")[0].classList.add("animationShake");
     }
+
+    protected sendCategory(){
+        this.board.category = this.questionsDay[0].category
+    }
 } 

@@ -18,8 +18,8 @@
             <div class="button-answer" v-for="(answer, index) in answers" :key="index">
                 <div class="button-answer-inner" :id="'button-answer-' + (index + 1)"
                     :ref="'buttonAnswer' + (index + 1)">
-                    <div class="button-answer-front bg-purple-900"> {{ index + 1 }} </div>
-                    <div class="button-answer-back bg-purple-900" @click="handleClickButtonAnswer($event, index)">
+                    <div class="button-answer-front bg-purple-800"> {{ index + 1 }} </div>
+                    <div class="button-answer-back bg-purple-800" @click="handleClickButtonAnswer($event, index)">
                         {{ answer }}
                     </div>
                 </div>
@@ -28,7 +28,7 @@
 
         <img class="base-main-menu" src="../../../assets/images/baseMainMenu.png" />
 
-        <div class="ani-background">
+        <div class="ani-background bg-purple-800">
             <div class="word top-left-bottom-right">?</div>
             <div class="word top-right-bottom-left">?</div>
             <div class="word bottom-left-top-right">?</div>
@@ -281,7 +281,6 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgb(135, 46, 217);
     z-index: -1;
 }
 

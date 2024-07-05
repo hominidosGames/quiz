@@ -1,9 +1,5 @@
-
-import { useRoute } from 'vue-router';
-import mookJson from '../../quiz.json';
 import { Helper } from '@/Helper';
-import { Answer } from '@/types/Question';
-import routes from '../router/index';
+
 
 export class Results {
 
@@ -14,8 +10,37 @@ export class Results {
     constructor($: any) {
         this.component = $;
         this.arrayAnswersUser = [];
+
     }
 
+
+    public verifyResponse(arrayResponsesUser: Array<any>) {
+        let arrayVerificado: Array<any> = [];
+        arrayResponsesUser.forEach((element: any) => {
+            this.arrayTrueOptions.forEach((trueResponse) => {
+                if (element.response == trueResponse.response) {
+                    arrayVerificado.push(trueResponse.response)
+                }
+                this.paintTrueResponses(arrayVerificado)
+             
+
+            })
+
+        })
+
+    }
+
+    public paintTrueResponses(arrayVerified: Array<any>) {
+        let prueba = document.querySelectorAll('#prueba');
+
+        prueba.forEach((nodo) => {
+            arrayVerified.forEach((elementTrue: any) => {
+                if (nodo.innerHTML == elementTrue) {
+                    nodo.style.backgroundColor = 'green';
+                }
+            })
+        })
+    }
 
 
 

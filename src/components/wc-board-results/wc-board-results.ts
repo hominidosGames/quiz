@@ -9,8 +9,8 @@ export default defineComponent({
     data() {
         return {
             resultsTrue: [],
-            totalResults: []
-
+            totalResults: [],
+            localKey: []
 
         };
     },
@@ -27,7 +27,16 @@ export default defineComponent({
         goToMenu() {
             //esto llevará a la pagina principal
             routes.push('/mainMenu');
+        },
+
+        verifyResponse() {
+            console.log(this.totalResults,'totalresults');
+            
+            let key = this.$route.query.key;
+            let keyParseada = JSON.parse(key)
+            this.menuResults.verifyResponse(keyParseada)
         }
+
 
     }
 });
