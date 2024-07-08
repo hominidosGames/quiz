@@ -1,13 +1,13 @@
 
 import { defineComponent } from 'vue';
 import wcTimerBar from '../wc-timer-bar/wc-timer-bar.vue';
-import { Manager } from '@/class/Manager';
-import routes from '@/router/index';
+import wcCategories from '../wc-categorys/wc-categories.vue';
 
 export default defineComponent({
     name: 'wc-board-questions',
     components: {
-        'wc-timer-bar': wcTimerBar
+        'wc-timer-bar': wcTimerBar,
+        'wc-categories': wcCategories,
     },
 
     data() {
@@ -17,16 +17,10 @@ export default defineComponent({
     },
     
     mounted() {
-        this.menuResults = new Manager(this)
-        this.menuResults.sendCategory()
+     
     },
     methods: {
-        goToGame(){
-            setTimeout(() => {
-               routes.push({ path: '/tabs/' });
-            }, 1000);
-        
-        },
+
       
     }
 });

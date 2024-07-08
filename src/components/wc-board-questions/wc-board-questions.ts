@@ -16,6 +16,7 @@ export default defineComponent({
             selectedAnswer: null,
             manager: null,
             question: "--",
+            flagTrue:false
         };
     },
     
@@ -26,6 +27,7 @@ export default defineComponent({
     methods: {
         handleClickButtonAnswer(evt, indexRes) {
             this.manager.checkAnswer(indexRes, evt.target);
+
         },
     }
 });

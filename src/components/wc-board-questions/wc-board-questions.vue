@@ -2,18 +2,22 @@
 
     <div class="wrapper-board-question bg-center bg-no-repeat bg-cover bg-top flex flex-col items-center">
         <!-- Timer -->
-       <!-- <wc-timer-bar></wc-timer-bar>-->
+        <!-- <wc-timer-bar></wc-timer-bar>-->
 
         <!--Panel pregunta-->
         <div ref="panelQuestion"
-            class="board-question w-95vw h-auto min-h-10rem flex justify-center items-center border border-black  text-sm rounded-lg font-mono bg-purple-700 shadow-lg hover:shadow-lg">
+            class="board-question w-95vw h-auto min-h-9rem flex justify-center items-center border border-black text-sm rounded-lg font-mono bg-purple-700 shadow-lg hover:shadow-lg">
             <p class="text-center">
                 {{ question }}
             </p>
         </div>
 
+        <div v-if="flagTrue" class="bg-green-700 p-4 rounded-full border-2 border-white">
+            <p> + 25 PT</p>
+        </div>
+
         <!--Botones-->
-        <div class="flex justify-center flex-col items-center w-screen">
+        <div class="flex justify-center flex-col items-center w-screen mt-10">
             <div class="button-answer" v-for="(answer, index) in answers" :key="index">
                 <div class="button-answer-inner" :id="'button-answer-' + (index + 1)"
                     :ref="'buttonAnswer' + (index + 1)">
@@ -72,7 +76,7 @@
     width: 300px;
     height: 50px;
     perspective: 1000px;
-    margin-top: 25px;
+    margin-top: 40px;
 }
 
 .button-answer-inner {
@@ -293,9 +297,11 @@
         top: 0;
         opacity: 0;
     }
-    50%{
+
+    50% {
         opacity: 1;
     }
+
     100% {
         left: 100%;
         top: 100%;
@@ -308,9 +314,11 @@
         right: 0;
         top: 0;
     }
-    50%{
+
+    50% {
         opacity: 1;
     }
+
     100% {
         right: 100%;
         top: 100%;
@@ -322,9 +330,11 @@
         left: 0;
         bottom: 0;
     }
-    50%{
+
+    50% {
         opacity: 1;
     }
+
     100% {
         left: 100%;
         bottom: 100%;
@@ -336,9 +346,11 @@
         right: 0;
         bottom: 0;
     }
-    50%{
+
+    50% {
         opacity: 1;
     }
+
     100% {
         right: 100%;
         bottom: 100%;

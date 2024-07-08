@@ -15,6 +15,7 @@ export class Manager {
     private results: Result[];
     private soundMaster: SoundMaster;
     private isFinishRound: boolean;
+    private flagTrue: boolean = false;
 
     constructor(board: any) {
         this.board = board;
@@ -40,7 +41,7 @@ export class Manager {
 
         if (indexRes == this.questionsDay[this.numActualQuestion].correct)
             isCorrect = true;
-
+        this.flagTrue = true;
         this.finishRound(isCorrect, indexRes, button);
     }
 
@@ -57,7 +58,7 @@ export class Manager {
     }
 
     private finishRound(isCorrect: boolean, indexRes: number, button: any) {
-        if (this.isFinishRound) return ;
+        if (this.isFinishRound) return;
 
         this.stopTimer();
         this.isFinishRound = true;
@@ -68,6 +69,7 @@ export class Manager {
         this.numActualQuestion++;
 
         isCorrect ? this.soundMaster.playDelay('correct', 1500) : this.soundMaster.playDelay('error', 1500);
+        isCorrect ? this.activePoints() : this.board.flagTrue = false;
 
         button && isCorrect ? button.classList.add("isCorrect") : button.classList.add("isInCorrect");
 
@@ -78,7 +80,8 @@ export class Manager {
             button.classList.remove("isCorrect");
             this.shakePanelQuestion();
             this.numActualQuestion < this.questionsDay.length ? this.nextRound() : this.goToFinalResult();
-        }, 3500);
+            this.board.flagTrue = false;
+        }, 4000);
     }
 
     private goToFinalResult() {
@@ -91,6 +94,13 @@ export class Manager {
                 }))
             }
         });
+    }
+
+
+    public activePoints() {
+        setTimeout(() => {
+            this.board.flagTrue = true
+        }, 2400);
     }
 
     private nextRound() {
@@ -123,7 +133,15 @@ export class Manager {
         document.getElementsByClassName("board-question")[0].classList.add("animationShake");
     }
 
-    protected sendCategory(){
+    protected sendAndImageCategory() {
         this.board.category = this.questionsDay[0].category
+        const elementImage = document.getElementById('imagenCategory');
+        let categoryWord = this.board.category.toLowerCase();
+        if (elementImage) {
+            elementImage.src = `../../../assets/images/${categoryWord}.png`
+        }
+
     }
+
+
 } 

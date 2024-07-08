@@ -10,7 +10,9 @@ export default defineComponent({
         return {
             resultsTrue: [],
             totalResults: [],
-            localKey: []
+            localKey: [],
+            flag:false,
+            numTrue:[]
 
         };
     },
@@ -30,8 +32,6 @@ export default defineComponent({
         },
 
         verifyResponse() {
-            console.log(this.totalResults,'totalresults');
-            
             let key = this.$route.query.key;
             let keyParseada = JSON.parse(key)
             this.menuResults.verifyResponse(keyParseada)

@@ -1,16 +1,15 @@
 import { Helper } from '@/Helper';
 
-
 export class Results {
 
     private component: any;
-    private arrayAnswersUser: any[];
-    private arrayTrueOptions = Helper.trueAnswersDay()
+    private arrayTrueOptions = Helper.trueAnswersDay();
+    // private flag: boolean = false;
+    // private numTrue: Array<any> = [];
+
 
     constructor($: any) {
         this.component = $;
-        this.arrayAnswersUser = [];
-
     }
 
 
@@ -22,8 +21,8 @@ export class Results {
                     arrayVerificado.push(trueResponse.response)
                 }
                 this.paintTrueResponses(arrayVerificado)
-             
-
+                this.component.flag = true;
+                this.component.numTrue = arrayVerificado.length * 25
             })
 
         })
