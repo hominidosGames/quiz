@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div id="spinner" class="loader mx-auto mb-4"></div>
+    <div class="mb-10">
+        <div id="spinner" class="loader mx-auto "></div>
         <p id="loadingText">Loading...</p>
     </div>
 
@@ -12,6 +12,7 @@
 <style>
 
 .loader {
+    margin-bottom: 20px;
     border: 4px solid rgba(0, 0, 0, 0.1);
     border-left-color: #000;
     border-radius: 50%;

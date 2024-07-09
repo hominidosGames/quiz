@@ -11,15 +11,6 @@ export default defineComponent({
 
     mounted() {
 
-        document.addEventListener("DOMContentLoaded", function () {
-            const spinner = document.getElementById('spinner');
-            setTimeout(() => {
-                if(spinner){
-                    spinner.style.display = 'none';
-                }
-          
-            }, 3000); 
-        });
     },
     methods: {
 

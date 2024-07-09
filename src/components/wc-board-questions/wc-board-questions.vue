@@ -13,6 +13,7 @@
         </div>
 
         <div v-if="flagTrue" class="mt-50 p-10 flex flex-col items-center justify-center">
+            <wc-spinner></wc-spinner>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-22 h-22 mx-auto">
                 <title>star</title>
                 <path fill="green" stroke="white" stroke-width="2"
@@ -21,7 +22,7 @@
             <p class="mt-5 text-medium"> + 25</p>
         </div>
 
-
+    
         <!--Botones-->
         <div v-else class="flex justify-center flex-col items-center w-screen mt-2">
             <div class="button-answer" v-for="(answer, index) in answers" :key="index">
