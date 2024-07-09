@@ -1,6 +1,6 @@
 <template>
     <div class="mb-10">
-        <div id="spinner" class="loader mx-auto "></div>
+        <div id="spinner" class="loader mx-auto"></div>
         <p id="loadingText">Loading...</p>
     </div>
 

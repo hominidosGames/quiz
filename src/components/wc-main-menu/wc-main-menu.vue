@@ -7,7 +7,7 @@
         <img class="foco2" ref="foco2" src="../../../assets/images/foco2.png" />
 
         <button @click="goToGame()"
-            class="button-main-menu p-3 bg-purple-800 text-white border border-black w-1/2 text-sm text-sm py-2.5 me-2 mb-8 rounded-lg font-mono">JUGAR!
+            class="button-main-menu p-3 bg-purple-800 text-white border border-black w-1/2 text-sm w-20 h-20 text-sm py-2.5 me-2 mb-8 rounded-full font-mono hover:bg-purple-600">JUGAR!
         </button>
     </div>
 

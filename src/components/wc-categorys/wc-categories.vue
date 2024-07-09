@@ -14,7 +14,7 @@
                         <img class="object-center" alt="imagen-categoria" id="imagenCategory" />
                     </div>
                   
-                    <button @click="goToGame()" class="mt-10 text-center p-2 rounded-2xl font-serif hover:bg-purple-400">
+                    <button @click="goToGame()" class="mt-16 text-center p-2 rounded-full font-serif hover:bg-purple-400 border-solid border-1 border-purple-700">
                         START
                     </button>
                 </div>
