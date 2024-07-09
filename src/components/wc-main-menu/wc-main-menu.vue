@@ -14,7 +14,6 @@
 </template>
 
 <script src="./wc-main-menu"></script>
-
 <style scoped>
 
 .back-main-menu {

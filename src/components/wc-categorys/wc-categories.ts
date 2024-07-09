@@ -23,7 +23,7 @@ export default defineComponent({
         goToGame(){
             setTimeout(() => {
                routes.push({ path: '/tabs/' });
-            }, 1000);
+            }, 1500);
         
         },
 

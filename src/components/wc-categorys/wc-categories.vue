@@ -10,12 +10,12 @@
             <div class="flip-card-back items-center">
                 <div class="flex flex-col">
                     <p class="title">{{ category }}</p>
-                    <div class="w-30 flex items-center">
+                    <div class="w-30 mt-2 flex items-center">
                         <img class="object-center" alt="imagen-categoria" id="imagenCategory" />
                     </div>
                   
                     <button @click="goToGame()" class="mt-10 text-center p-2 rounded-2xl font-serif hover:bg-purple-400">
-                        Comenzar
+                        START
                     </button>
                 </div>
 

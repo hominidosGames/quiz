@@ -68,9 +68,8 @@ export class Manager {
         });
         this.numActualQuestion++;
 
-        isCorrect ? this.soundMaster.playDelay('correct', 1500) : this.soundMaster.playDelay('error', 1500);
-        isCorrect ? this.activePoints() : this.board.flagTrue = false;
-
+        isCorrect ? this.soundMaster.playDelay('correct', 2500) : this.soundMaster.playDelay('error', 2500);
+        isCorrect ? setTimeout(() => { this.activePoints() }, 500) : this.board.flagTrue = false;
         button && isCorrect ? button.classList.add("isCorrect") : button.classList.add("isInCorrect");
 
         // Animacion final y siguiente ronda
@@ -78,9 +77,11 @@ export class Manager {
             this.hiddenAnswer();
             button.classList.remove("isInCorrect");
             button.classList.remove("isCorrect");
-            this.shakePanelQuestion();
-            this.numActualQuestion < this.questionsDay.length ? this.nextRound() : this.goToFinalResult();
+            // this.shakePanelQuestion();
             this.board.flagTrue = false;
+            this.board.spinner = true;
+            this.numActualQuestion < this.questionsDay.length ? this.nextRound() : this.goToFinalResult();
+            this.board.spinner = false;
         }, 4000);
     }
 
@@ -100,7 +101,7 @@ export class Manager {
     public activePoints() {
         setTimeout(() => {
             this.board.flagTrue = true
-        }, 2400);
+        }, 2000);
     }
 
     private nextRound() {
@@ -108,7 +109,7 @@ export class Manager {
         this.printQuestion();
         this.printAnswers();
         this.resetTimer();
-        setTimeout(() => { this.showAnswers(); }, 500);
+        setTimeout(() => { this.showAnswers(); }, 100);
         setTimeout(() => { this.initTimer(); }, 4000);
     }
 
@@ -142,6 +143,14 @@ export class Manager {
         }
 
     }
+
+
+    private activeSpinner() {
+
+            this.board.spinner = true
+       
+    }
+
 
 
 } 

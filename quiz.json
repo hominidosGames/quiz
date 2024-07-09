@@ -1541,64 +1541,7 @@
         ],
         "191": [
             {
-                "category": "Literatura",
-                "question": "¿Quién escribió 'Don Quijote de la Mancha'?",
-                "answers": [
-                    "Miguel de Cervantes",
-                    "Federico García Lorca",
-                    "Gabriel García Márquez",
-                    "Pablo Neruda"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "Literatura",
-                "question": "¿Cuál es la obra más conocida de William Shakespeare?",
-                "answers": [
-                    "Hamlet",
-                    "Romeo y Julieta",
-                    "Macbeth",
-                    "Otelo"
-                ],
-                "correct": 0
-            },
-            {
-                "category": "Literatura",
-                "question": "¿Quién escribió 'Cien años de soledad'?",
-                "answers": [
-                    "Mario Vargas Llosa",
-                    "Julio Cortázar",
-                    "Gabriel García Márquez",
-                    "Isabel Allende"
-                ],
-                "correct": 2
-            },
-            {
-                "category": "Literatura",
-                "question": "¿Qué escritor es conocido por sus obras de ciencia ficción como '1984'?",
-                "answers": [
-                    "Aldous Huxley",
-                    "Isaac Asimov",
-                    "George Orwell",
-                    "Philip K. Dick"
-                ],
-                "correct": 2
-            },
-            {
-                "category": "Literatura",
-                "question": "¿Quién escribió 'El principito'?",
-                "answers": [
-                    "Antoine de Saint-Exupéry",
-                    "Jorge Luis Borges",
-                    "Paulo Coelho",
-                    "Franz Kafka"
-                ],
-                "correct": 0
-            }
-        ],
-        "192": [
-            {
-                "category": "Musica",
+                "category": "Música",
                 "question": "¿Quién es conocido como el 'Rey del Rock and Roll'?",
                 "answers": [
                     "Elvis Presley",
@@ -1609,7 +1552,7 @@
                 "correct": 0
             },
             {
-                "category": "Musica",
+                "category": "Música",
                 "question": "¿Qué banda lanzó el álbum 'The Dark Side of the Moon'?",
                 "answers": [
                     "Led Zeppelin",
@@ -1620,7 +1563,7 @@
                 "correct": 1
             },
             {
-               "category": "Musica",
+                "category": "Música",
                 "question": "¿Qué cantante popularizó la canción 'Rolling in the Deep'?",
                 "answers": [
                     "Adele",
@@ -1631,7 +1574,7 @@
                 "correct": 0
             },
             {
-                "category": "Musica",
+                "category": "Música",
                 "question": "¿Qué cantante es conocido como 'La Reina del Soul'?",
                 "answers": [
                     "Whitney Houston",
@@ -1642,7 +1585,7 @@
                 "correct": 2
             },
             {
-               "category": "Musica",
+                "category": "Música",
                 "question": "¿Qué famoso compositor alemán quedó sordo a los 30 años?",
                 "answers": [
                     "Johann Sebastian Bach",
@@ -1653,9 +1596,9 @@
                 "correct": 1
             }
         ],
-        "189": [
+        "192": [
             {
-                "category": "Musica",
+                "category": "Música",
                 "question": "¿Quién es conocido como el 'Rey del Rock and Roll'?",
                 "answers": [
                     "Elvis Presley",
@@ -1666,7 +1609,7 @@
                 "correct": 0
             },
             {
-                "category": "Musica",
+                "category": "Música",
                 "question": "¿Qué banda lanzó el álbum 'The Dark Side of the Moon'?",
                 "answers": [
                     "Led Zeppelin",
@@ -1677,7 +1620,7 @@
                 "correct": 1
             },
             {
-               "category": "Musica",
+                "category": "Música",
                 "question": "¿Qué cantante popularizó la canción 'Rolling in the Deep'?",
                 "answers": [
                     "Adele",
@@ -1688,7 +1631,7 @@
                 "correct": 0
             },
             {
-                "category": "Musica",
+                "category": "Música",
                 "question": "¿Qué cantante es conocido como 'La Reina del Soul'?",
                 "answers": [
                     "Whitney Houston",
@@ -1699,7 +1642,64 @@
                 "correct": 2
             },
             {
-               "category": "Musica",
+                "category": "Música",
+                "question": "¿Qué famoso compositor alemán quedó sordo a los 30 años?",
+                "answers": [
+                    "Johann Sebastian Bach",
+                    "Ludwig van Beethoven",
+                    "Franz Schubert",
+                    "Richard Wagner"
+                ],
+                "correct": 1
+            }
+        ],
+        "193": [
+            {
+                "category": "Música",
+                "question": "¿Quién es conocido como el 'Rey del Rock and Roll'?",
+                "answers": [
+                    "Elvis Presley",
+                    "Chuck Berry",
+                    "Jerry Lee Lewis",
+                    "Little Richard"
+                ],
+                "correct": 0
+            },
+            {
+                "category": "Música",
+                "question": "¿Qué banda lanzó el álbum 'The Dark Side of the Moon'?",
+                "answers": [
+                    "Led Zeppelin",
+                    "Pink Floyd",
+                    "The Beatles",
+                    "The Rolling Stones"
+                ],
+                "correct": 1
+            },
+            {
+                "category": "Música",
+                "question": "¿Qué cantante popularizó la canción 'Rolling in the Deep'?",
+                "answers": [
+                    "Adele",
+                    "Beyoncé",
+                    "Taylor Swift",
+                    "Rihanna"
+                ],
+                "correct": 0
+            },
+            {
+                "category": "Música",
+                "question": "¿Qué cantante es conocido como 'La Reina del Soul'?",
+                "answers": [
+                    "Whitney Houston",
+                    "Diana Ross",
+                    "Aretha Franklin",
+                    "Tina Turner"
+                ],
+                "correct": 2
+            },
+            {
+                "category": "Música",
                 "question": "¿Qué famoso compositor alemán quedó sordo a los 30 años?",
                 "answers": [
                     "Johann Sebastian Bach",
@@ -1710,6 +1710,5 @@
                 "correct": 1
             }
         ]
-        
     }
 }

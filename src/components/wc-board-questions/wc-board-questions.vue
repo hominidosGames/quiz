@@ -5,24 +5,30 @@
         <!-- <wc-timer-bar></wc-timer-bar>-->
 
         <!--Panel pregunta-->
-        <div ref="panelQuestion"
-            class="board-question w-95vw h-auto min-h-9rem flex justify-center items-center border border-black text-sm rounded-lg font-mono bg-purple-700 shadow-lg hover:shadow-lg">
+        <div v-if="flagTrue == false" ref="panelQuestion"
+            class="board-question w-95vw h-auto min-h-9rem flex justify-center items-center border border-black text-sm rounded-lg font-mono shadow-lg hover:shadow-lg">
             <p class="text-center">
                 {{ question }}
             </p>
         </div>
 
-        <div v-if="flagTrue" class="bg-green-700 p-4 rounded-full border-2 border-white">
-            <p> + 25 PT</p>
+        <div v-if="flagTrue" class="mt-50 p-10 flex flex-col items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-22 h-22 mx-auto">
+                <title>star</title>
+                <path fill="green" stroke="white" stroke-width="2"
+                    d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+            </svg>
+            <p class="mt-5 text-medium"> + 25</p>
         </div>
 
+
         <!--Botones-->
-        <div class="flex justify-center flex-col items-center w-screen mt-10">
+        <div v-else class="flex justify-center flex-col items-center w-screen mt-2">
             <div class="button-answer" v-for="(answer, index) in answers" :key="index">
                 <div class="button-answer-inner" :id="'button-answer-' + (index + 1)"
                     :ref="'buttonAnswer' + (index + 1)">
-                    <div class="button-answer-front bg-purple-800"> {{ index + 1 }} </div>
-                    <div class="button-answer-back bg-purple-800" @click="handleClickButtonAnswer($event, index)">
+                    <div class="button-answer-front bg-purple-600"> {{ index + 1 }} </div>
+                    <div class="button-answer-back bg-purple-600" @click="handleClickButtonAnswer($event, index)">
                         {{ answer }}
                     </div>
                 </div>
@@ -46,7 +52,7 @@
 .wrapper-board-question {
     height: 100%;
     color: white;
-    padding: 50px;
+    padding: 15px;
 }
 
 .board-question {
@@ -400,5 +406,20 @@
 
 .word:nth-child(4) {
     animation-delay: 4s;
+}
+
+.loader {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #000;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
 </style>
