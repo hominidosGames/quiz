@@ -37,20 +37,6 @@
             <p class="mt-5 text-medium"> + 25</p>
         </div>
 
-
-        <!--Botones-->
-        <!-- <div v-else class="flex justify-center flex-col items-center w-screen mt-2">
-            <div class="button-answer" v-for="(answer, index) in answers" :key="index">
-                <div class="button-answer-inner" :id="'button-answer-' + (index + 1)"
-                    :ref="'buttonAnswer' + (index + 1)">
-                    <div class="button-answer-front bg-purple-400 font-mono"> {{ index + 1 }} </div>
-                    <div class="button-answer-back bg-purple-400 font-mono" @click="handleClickButtonAnswer($event, index)">
-                        {{ answer }}
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
         <img class="base-main-menu" src="../../../assets/images/baseMainMenu.png" />
 
         <div class="ani-background bg-purple-800">
