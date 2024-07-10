@@ -7,7 +7,7 @@
         <!--Panel pregunta-->
         <div v-if="flagTrue == false" class="flex flex-col justify-center items-center">
             <div ref="panelQuestion"
-                class="w-90vw board-question mt-2 h-auto min-h-10rem flex justify-center p-10 items-center border border-black text-base rounded-lg font-mono shadow-lg">
+                class="w-90vw board-question m-2 h-auto min-h-10rem flex justify-center p-10 items-center border border-black text-base rounded-lg font-mono shadow-lg">
                 <p class="text-center">
                     {{ question }}
                 </p>
