@@ -3,18 +3,19 @@
     <img class="foco2" ref="foco2" src="../../../assets/images/foco2.png" />
     <div class="flip-card mt-50">
 
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <p class="title p-2">El tema de hoy es...</p>
+        <div class="flip-card-inner" ref="redCard">
+            <div class="flip-card-front bg-purple-800">
+                <p class="title p-2 font-mono">El tema de hoy es...</p>
             </div>
-            <div class="flip-card-back items-center">
+            <div class="flip-card-back items-center bg-amber-500">
                 <div class="flex flex-col">
-                    <p class="title">{{ category }}</p>
+                    <p class="title font-mono">{{ category }}</p>
                     <div class="w-30 mt-2 flex items-center">
                         <img class="object-center" alt="imagen-categoria" id="imagenCategory" />
                     </div>
-                  
-                    <button @click="goToGame()" class="mt-16 text-center p-2 rounded-full font-serif hover:bg-purple-400 border-solid border-1 border-purple-700">
+
+                    <button @click="goToGame()"
+                        class="mt-16 text-center text-sm font-mono text-black hover:text-white p-1 rounded-full font-serif hover:bg-black border-solid border-1 shadow-lg">
                         START
                     </button>
                 </div>
@@ -33,7 +34,6 @@
     width: 200px;
     height: 310px;
     perspective: 1000px;
-    font-family: sans-serif;
 }
 
 .title {
@@ -58,47 +58,50 @@
     transform: rotateY(180deg);
 }
 
-.flip-card-front{
-    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border: 4px solid rgb(255, 209, 3);
-    border-radius: 1rem;
-}
-.flip-card-back {
-    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border: 4px solid rgb(174, 107, 250);
-    border-radius: 1rem;
-}
-
 .flip-card-front {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1rem;
     /* background: linear-gradient(120deg, rgb(252, 44, 44) 60%, rgb(245, 63, 63) 88%,
             rgb(255, 211, 195) 40%, rgba(248, 5, 5, 0.603) 48%); */
-    background-color: rgb(174, 107, 250);
-    color: rgb(0, 0, 0);
+    /* background-color: rgb(174, 107, 250); */
+    color: white;
+    z-index: 2;
+    box-shadow:
+        0 0 3px 1.5px #fff,
+        0 0 5px 3px yellow,
+        0 0 7px 4.5px yellow;
 }
 
 .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1rem;
     /* background: linear-gradient(120deg, rgb(252, 44, 44) 60%, rgb(245, 63, 63) 88%,
             rgb(255, 211, 195) 40%, rgba(248, 5, 5, 0.603) 48%); */
-    background-color: rgb(216, 166, 67);
     color: rgb(0, 0, 0);
     transform: rotateY(180deg);
+    z-index: 2;
+    box-shadow:
+        0 0 3px 1.5px #fff,
+        0 0 5px 3px yellow,
+        0 0 7px 4.5px yellow;
 }
+
 
 .foco {
     position: absolute;
@@ -189,8 +192,4 @@
         bottom: 0
     }
 }
-
-
-
-
 </style>

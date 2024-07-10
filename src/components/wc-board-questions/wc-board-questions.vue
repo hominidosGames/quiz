@@ -5,15 +5,30 @@
         <!-- <wc-timer-bar></wc-timer-bar>-->
 
         <!--Panel pregunta-->
-        <div v-if="flagTrue == false" ref="panelQuestion"
-            class="board-question w-95vw h-auto min-h-9rem flex justify-center items-center border border-black text-sm rounded-lg font-mono shadow-lg hover:shadow-lg">
-            <p class="text-center">
-                {{ question }}
-            </p>
+        <div v-if="flagTrue == false" class="flex flex-col justify-center items-center">
+            <div ref="panelQuestion"
+                class="w-90vw board-question mt-2 h-auto min-h-10rem flex justify-center p-10 items-center border border-black text-base rounded-lg font-mono shadow-lg">
+                <p class="text-center">
+                    {{ question }}
+                </p>
+            </div>
+            <div class="flex justify-center flex-col items-center w-screen mt-2">
+                <div class="button-answer" v-for="(answer, index) in answers" :key="index">
+                    <div class="button-answer-inner" :id="'button-answer-' + (index + 1)"
+                        :ref="'buttonAnswer' + (index + 1)">
+                        <div class="button-answer-front bg-purple-400 font-mono"> {{ index + 1 }} </div>
+                        <div class="button-answer-back bg-purple-400 font-mono"
+                            @click="handleClickButtonAnswer($event, index)">
+                            {{ answer }}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div v-if="flagTrue" class="mt-50 p-10 flex flex-col items-center justify-center">
-            <wc-spinner></wc-spinner>
+
+        <div v-else="flagTrue" class="mt-50 p-10 flex flex-col items-center justify-center">
+            <!-- <wc-spinner></wc-spinner> -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-22 h-22 mx-auto">
                 <title>star</title>
                 <path fill="green" stroke="white" stroke-width="2"
@@ -22,19 +37,19 @@
             <p class="mt-5 text-medium"> + 25</p>
         </div>
 
-    
+
         <!--Botones-->
-        <div v-else class="flex justify-center flex-col items-center w-screen mt-2">
+        <!-- <div v-else class="flex justify-center flex-col items-center w-screen mt-2">
             <div class="button-answer" v-for="(answer, index) in answers" :key="index">
                 <div class="button-answer-inner" :id="'button-answer-' + (index + 1)"
                     :ref="'buttonAnswer' + (index + 1)">
-                    <div class="button-answer-front bg-purple-600"> {{ index + 1 }} </div>
-                    <div class="button-answer-back bg-purple-600" @click="handleClickButtonAnswer($event, index)">
+                    <div class="button-answer-front bg-purple-400 font-mono"> {{ index + 1 }} </div>
+                    <div class="button-answer-back bg-purple-400 font-mono" @click="handleClickButtonAnswer($event, index)">
                         {{ answer }}
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <img class="base-main-menu" src="../../../assets/images/baseMainMenu.png" />
 
@@ -61,7 +76,7 @@
         0 0 3px 1.5px #fff,
         0 0 5px 3px yellow,
         0 0 7px 4.5px yellow;
-    margin-bottom: 50px
+    margin-bottom: 40px
 }
 
 .red {
@@ -115,10 +130,14 @@
 .button-answer-back {
     position: absolute;
     width: 300px;
-    line-height: 50px;
+    line-height: 48px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    color: white;
+    color: black;
+    border: solid 1px;
+    border-radius: 2px;
+    border-color: white;
+
 }
 
 .button-answer-back {

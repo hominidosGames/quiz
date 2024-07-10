@@ -68,7 +68,7 @@ export class Manager {
         });
         this.numActualQuestion++;
 
-        isCorrect ? this.soundMaster.playDelay('correct', 2500) : this.soundMaster.playDelay('error', 2500);
+        isCorrect ? this.soundMaster.playDelay('correct', 1600) : this.soundMaster.playDelay('error', 1600);
         isCorrect ? setTimeout(() => { this.activePoints() }, 500) : this.board.flagTrue = false;
         button && isCorrect ? button.classList.add("isCorrect") : button.classList.add("isInCorrect");
 
@@ -134,7 +134,7 @@ export class Manager {
         document.getElementsByClassName("board-question")[0].classList.add("animationShake");
     }
 
-    protected sendAndImageCategory() {
+    protected sendImageCategory() {
         this.board.category = this.questionsDay[0].category
         const elementImage = document.getElementById('imagenCategory');
         let categoryWord = this.board.category.toLowerCase();
@@ -142,13 +142,6 @@ export class Manager {
             elementImage.src = `../../../assets/images/${categoryWord}.png`
         }
 
-    }
-
-
-    private activeSpinner() {
-
-            this.board.spinner = true
-       
     }
 
 

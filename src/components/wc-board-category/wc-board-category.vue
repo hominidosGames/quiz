@@ -3,7 +3,6 @@
 
         <wc-timer-bar></wc-timer-bar>
 
-  
         <wc-categories>
             
         </wc-categories>

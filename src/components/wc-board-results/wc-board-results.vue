@@ -30,7 +30,7 @@
             </div>
             <div class="mt-10">
                 <button @click="goToMenu"
-                    class="w-23 h-23 bg-fuchsia-700 hover:bg-purple-900 rounded-full text-white shadow-md font-mono text-xs border-2 border-white">
+                    class="w-23 h-23 bg-fuchsia-700 hover:bg-purple-900 rounded-full text-white shadow-lg font-mono text-xs border-2 border-white py-3 ">
                     Menú
                 </button>
             </div>
@@ -38,9 +38,8 @@
 
         <div class="m-20" v-if="flag == false">
             <button @click="verifyResponse"
-                class="w-23 h-23 bg-fuchsia-700 hover:bg-purple-900 rounded-full text-white shadow-md font-mono text-xs border-2 border-white p-3">Puntuación</button>
+                class="w-23 h-23 bg-fuchsia-700 rounded-full text-white shadow-md font-mono text-xs border-2 border border-black py-3 me-2">Puntuación</button>
         </div>
-
 
         <img class="base-main-menu fixed bottom-0" src="../../../assets/images/baseMainMenu.png" />
 

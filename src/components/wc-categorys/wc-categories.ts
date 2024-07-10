@@ -5,28 +5,31 @@ import routes from '@/router/index';
 export default defineComponent({
     name: 'wc-categories',
     components: {
-    
+
     },
 
     data() {
         return {
-           category:""
+            category: ""
         };
     },
-    
+
     mounted() {
         this.menuResults = new Manager(this);
-        this.menuResults.sendAndImageCategory();
-        
+        this.$refs.redCard.addEventListener("click", this.sendImageCategory());
+
     },
     methods: {
-        goToGame(){
+        goToGame() {
             setTimeout(() => {
-               routes.push({ path: '/tabs/' });
+                routes.push({ path: '/tabs/' });
             }, 1500);
-        
+
         },
 
-      
+        sendImageCategory() {
+            this.menuResults.sendImageCategory();
+        },
+
     }
 });
