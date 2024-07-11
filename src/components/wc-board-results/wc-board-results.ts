@@ -29,7 +29,14 @@ export default defineComponent({
         goToMenu() {
             //esto llevará a la pagina principal
             routes.push('/mainMenu');
+        },
+
+        verifyResponse() {
+            let key = this.$route.query.key;
+            let keyParseada = JSON.parse(key)
+            this.menuResults.verifyResponse(keyParseada)
         }
+
 
     }
 });

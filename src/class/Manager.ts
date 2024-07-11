@@ -13,6 +13,9 @@ export class Manager {
     private numActualQuestion: number;
     private timer: Timer;
     private results: Result[];
+    private soundMaster: SoundMaster;
+    private isFinishRound: boolean;
+    private flagTrue: boolean = false;
 
     constructor(board: any) {
         this.board = board;

@@ -10,19 +10,6 @@
                             id="prueba">{{ preguntaRespuesta.question }}</td>
                         <td class="px-3 py-2 text-start text-xs text-white font-medium bg-purple-900 font-mono border-solid border-2 border-fuchsia-700"
                             id="prueba">{{ preguntaRespuesta.response }}</td>
-    <div class="p-5 flex flex-col items-center bg-gradient-to-r bg-green-400 h-screen">
-
-        <div class="mb-15 mt-">
-            <div class="flex items-center justify-center">
-                <h1 class="text-">{{ resultsTrue.length }} / 5</h1>
-            </div>
-            <p class="text-black font-mono text-m mb-5 text-center">Respuestas acertadas</p>
-            <table class="w-full divide-y text-left text-sm">
-                <tbody>
-                    <tr v-for="(answer, index) in resultsTrue" :key="index"
-                        class="border border-neutral-200 text-black ">
-                        <td class="px-3 py-2 text-xs bg-yellow-400 font-mono">{{ answer.question }}</td>
-                        <td class="px-3 py-2 text-xs bg-yellow-400 font-mono">{{ answer.response }}</td>
                     </tr>
                 </tbody>
 

@@ -257,7 +257,7 @@
     }
 
     20% {
-        transform: translateX(-10px)
+        transform: translateX(-10px))
     }
 
     30% {
