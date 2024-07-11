@@ -684,7 +684,7 @@
                 "correct": 0
             }
         ],
-        "160": [
+        "163": [
             {
                 "category": "7",
                 "question": "¿Quién escribió 'Don Quijote de la Mancha'?",
@@ -741,7 +741,7 @@
                 "correct": 0
             }
         ],
-        "120": [
+        "165": [
             {
                 "category": "7",
                 "question": "¿Quién escribió 'Don Quijote de la Mancha'?",
@@ -798,7 +798,7 @@
                 "correct": 0
             }
         ],
-        "121": [
+        "166": [
             {
                 "category": "7",
                 "question": "¿Quién escribió 'Don Quijote de la Mancha'?",
@@ -855,7 +855,7 @@
                 "correct": 0
             }
         ],
-        "122": [
+        "167": [
             {
                 "category": "7",
                 "question": "¿Quién escribió 'Don Quijote de la Mancha'?",
@@ -1427,174 +1427,288 @@
         ],
         "132": [
             {
-              "category": "Cine",
-              "question": "¿Quién interpretó a James Bond en la película 'Skyfall'?",
-              "answers": [
-                "Daniel Craig",
-                "Pierce Brosnan",
-                "Sean Connery",
-                "Roger Moore"
-              ],
-              "correct": 0
+                "category": "Cine",
+                "question": "¿Quién interpretó a James Bond en la película 'Skyfall'?",
+                "answers": [
+                    "Daniel Craig",
+                    "Pierce Brosnan",
+                    "Sean Connery",
+                    "Roger Moore"
+                ],
+                "correct": 0
             },
             {
-              "category": "Cine",
-              "question": "¿Cuál es la película más taquillera de todos los tiempos?",
-              "answers": [
-                "Avengers: Endgame",
-                "Avatar",
-                "Titanic",
-                "Star Wars: El despertar de la Fuerza"
-              ],
-              "correct": 0
+                "category": "Cine",
+                "question": "¿Cuál es la película más taquillera de todos los tiempos?",
+                "answers": [
+                    "Avengers: Endgame",
+                    "Avatar",
+                    "Titanic",
+                    "Star Wars: El despertar de la Fuerza"
+                ],
+                "correct": 0
             },
             {
-              "category": "Cine",
-              "question": "¿Quién dirigió la película 'La La Land'?",
-              "answers": [
-                "Christopher Nolan",
-                "Martin Scorsese",
-                "Quentin Tarantino",
-                "Damien Chazelle"
-              ],
-              "correct": 3
+                "category": "Cine",
+                "question": "¿Quién dirigió la película 'La La Land'?",
+                "answers": [
+                    "Christopher Nolan",
+                    "Martin Scorsese",
+                    "Quentin Tarantino",
+                    "Damien Chazelle"
+                ],
+                "correct": 3
             },
             {
-              "category": "Cine",
-              "question": "¿Cuál de las siguientes películas ganó el premio a la Mejor Película en los Premios Óscar de 2019?",
-              "answers": [
-                "Green Book",
-                "Bohemian Rhapsody",
-                "Roma",
-                "La favorita"
-              ],
-              "correct": 0
+                "category": "Cine",
+                "question": "¿Cuál de las siguientes películas ganó el premio a la Mejor Película en los Premios Óscar de 2019?",
+                "answers": [
+                    "Green Book",
+                    "Bohemian Rhapsody",
+                    "Roma",
+                    "La favorita"
+                ],
+                "correct": 0
             },
             {
-              "category": "Cine",
-              "question": "¿Quién interpretó a Joker en la película homónima de 2019?",
-              "answers": [
-                "Joaquin Phoenix",
-                "Heath Ledger",
-                "Jared Leto",
-                "Jack Nicholson"
-              ],
-              "correct": 0
+                "category": "Cine",
+                "question": "¿Quién interpretó a Joker en la película homónima de 2019?",
+                "answers": [
+                    "Joaquin Phoenix",
+                    "Heath Ledger",
+                    "Jared Leto",
+                    "Jack Nicholson"
+                ],
+                "correct": 0
             }
-          ],
-          "133": [
+        ],
+        "190": [
             {
-              "category": "Cine",
-              "question": "¿Quién interpretó a James Bond en la película 'Skyfall'?",
-              "answers": [
-                "Daniel Craig",
-                "Pierce Brosnan",
-                "Sean Connery",
-                "Roger Moore"
-              ],
-              "correct": 0
+                "category": "Cine",
+                "question": "¿Quién interpretó a James Bond en la película 'Skyfall'?",
+                "answers": [
+                    "Daniel Craig",
+                    "Pierce Brosnan",
+                    "Sean Connery",
+                    "Roger Moore"
+                ],
+                "correct": 0
             },
             {
-              "category": "Cine",
-              "question": "¿Cuál es la película más taquillera de todos los tiempos?",
-              "answers": [
-                "Avengers: Endgame",
-                "Avatar",
-                "Titanic",
-                "Star Wars: El despertar de la Fuerza"
-              ],
-              "correct": 0
+                "category": "Cine",
+                "question": "¿Cuál es la película más taquillera de todos los tiempos?",
+                "answers": [
+                    "Avengers: Endgame",
+                    "Avatar",
+                    "Titanic",
+                    "Star Wars: El despertar de la Fuerza"
+                ],
+                "correct": 0
             },
             {
-              "category": "Cine",
-              "question": "¿Quién dirigió la película 'La La Land'?",
-              "answers": [
-                "Christopher Nolan",
-                "Martin Scorsese",
-                "Quentin Tarantino",
-                "Damien Chazelle"
-              ],
-              "correct": 3
+                "category": "Cine",
+                "question": "¿Quién dirigió la película 'La La Land'?",
+                "answers": [
+                    "Christopher Nolan",
+                    "Martin Scorsese",
+                    "Quentin Tarantino",
+                    "Damien Chazelle"
+                ],
+                "correct": 3
             },
             {
-              "category": "Cine",
-              "question": "¿Cuál de las siguientes películas ganó el premio a la Mejor Película en los Premios Óscar de 2019?",
-              "answers": [
-                "Green Book",
-                "Bohemian Rhapsody",
-                "Roma",
-                "La favorita"
-              ],
-              "correct": 0
+                "category": "Cine",
+                "question": "¿Cuál de las siguientes películas ganó el premio a la Mejor Película en los Premios Óscar de 2019?",
+                "answers": [
+                    "Green Book",
+                    "Bohemian Rhapsody",
+                    "Roma",
+                    "La favorita"
+                ],
+                "correct": 0
             },
             {
-              "category": "Cine",
-              "question": "¿Quién interpretó a Joker en la película homónima de 2019?",
-              "answers": [
-                "Joaquin Phoenix",
-                "Heath Ledger",
-                "Jared Leto",
-                "Jack Nicholson"
-              ],
-              "correct": 0
+                "category": "Cine",
+                "question": "¿Quién interpretó a Joker en la película homónima de 2019?",
+                "answers": [
+                    "Joaquin Phoenix",
+                    "Heath Ledger",
+                    "Jared Leto",
+                    "Jack Nicholson"
+                ],
+                "correct": 0
             }
-          ],
-          "134": [
+        ],
+        "191": [
             {
-              "category": "Cine",
-              "question": "¿Quién interpretó a James Bond en la película 'Skyfall'?",
-              "answers": [
-                "Daniel Craig",
-                "Pierce Brosnan",
-                "Sean Connery",
-                "Roger Moore"
-              ],
-              "correct": 0
+                "category": "Música",
+                "question": "¿Quién es conocido como el 'Rey del Rock and Roll'?",
+                "answers": [
+                    "Elvis Presley",
+                    "Chuck Berry",
+                    "Jerry Lee Lewis",
+                    "Little Richard"
+                ],
+                "correct": 0
             },
             {
-              "category": "Cine",
-              "question": "¿Cuál es la película más taquillera de todos los tiempos?",
-              "answers": [
-                "Avengers: Endgame",
-                "Avatar",
-                "Titanic",
-                "Star Wars: El despertar de la Fuerza"
-              ],
-              "correct": 0
+                "category": "Música",
+                "question": "¿Qué banda lanzó el álbum 'The Dark Side of the Moon'?",
+                "answers": [
+                    "Led Zeppelin",
+                    "Pink Floyd",
+                    "The Beatles",
+                    "The Rolling Stones"
+                ],
+                "correct": 1
             },
             {
-              "category": "Cine",
-              "question": "¿Quién dirigió la película 'La La Land'?",
-              "answers": [
-                "Christopher Nolan",
-                "Martin Scorsese",
-                "Quentin Tarantino",
-                "Damien Chazelle"
-              ],
-              "correct": 3
+                "category": "Música",
+                "question": "¿Qué cantante popularizó la canción 'Rolling in the Deep'?",
+                "answers": [
+                    "Adele",
+                    "Beyoncé",
+                    "Taylor Swift",
+                    "Rihanna"
+                ],
+                "correct": 0
             },
             {
-              "category": "Cine",
-              "question": "¿Cuál de las siguientes películas ganó el premio a la Mejor Película en los Premios Óscar de 2019?",
-              "answers": [
-                "Green Book",
-                "Bohemian Rhapsody",
-                "Roma",
-                "La favorita"
-              ],
-              "correct": 0
+                "category": "Música",
+                "question": "¿Qué cantante es conocido como 'La Reina del Soul'?",
+                "answers": [
+                    "Whitney Houston",
+                    "Diana Ross",
+                    "Aretha Franklin",
+                    "Tina Turner"
+                ],
+                "correct": 2
             },
             {
-              "category": "Cine",
-              "question": "¿Quién interpretó a Joker en la película homónima de 2019?",
-              "answers": [
-                "Joaquin Phoenix",
-                "Heath Ledger",
-                "Jared Leto",
-                "Jack Nicholson"
-              ],
-              "correct": 0
+                "category": "Música",
+                "question": "¿Qué famoso compositor alemán quedó sordo a los 30 años?",
+                "answers": [
+                    "Johann Sebastian Bach",
+                    "Ludwig van Beethoven",
+                    "Franz Schubert",
+                    "Richard Wagner"
+                ],
+                "correct": 1
             }
-          ]
+        ],
+        "192": [
+            {
+                "category": "Música",
+                "question": "¿Quién es conocido como el 'Rey del Rock and Roll'?",
+                "answers": [
+                    "Elvis Presley",
+                    "Chuck Berry",
+                    "Jerry Lee Lewis",
+                    "Little Richard"
+                ],
+                "correct": 0
+            },
+            {
+                "category": "Música",
+                "question": "¿Qué banda lanzó el álbum 'The Dark Side of the Moon'?",
+                "answers": [
+                    "Led Zeppelin",
+                    "Pink Floyd",
+                    "The Beatles",
+                    "The Rolling Stones"
+                ],
+                "correct": 1
+            },
+            {
+                "category": "Música",
+                "question": "¿Qué cantante popularizó la canción 'Rolling in the Deep'?",
+                "answers": [
+                    "Adele",
+                    "Beyoncé",
+                    "Taylor Swift",
+                    "Rihanna"
+                ],
+                "correct": 0
+            },
+            {
+                "category": "Música",
+                "question": "¿Qué cantante es conocido como 'La Reina del Soul'?",
+                "answers": [
+                    "Whitney Houston",
+                    "Diana Ross",
+                    "Aretha Franklin",
+                    "Tina Turner"
+                ],
+                "correct": 2
+            },
+            {
+                "category": "Música",
+                "question": "¿Qué famoso compositor alemán quedó sordo a los 30 años?",
+                "answers": [
+                    "Johann Sebastian Bach",
+                    "Ludwig van Beethoven",
+                    "Franz Schubert",
+                    "Richard Wagner"
+                ],
+                "correct": 1
+            }
+        ],
+        "193": [
+            {
+                "category": "Música",
+                "question": "¿Quién es conocido como el 'Rey del Rock and Roll'?",
+                "answers": [
+                    "Elvis Presley",
+                    "Chuck Berry",
+                    "Jerry Lee Lewis",
+                    "Little Richard"
+                ],
+                "correct": 0
+            },
+            {
+                "category": "Música",
+                "question": "¿Qué banda lanzó el álbum 'The Dark Side of the Moon'?",
+                "answers": [
+                    "Led Zeppelin",
+                    "Pink Floyd",
+                    "The Beatles",
+                    "The Rolling Stones"
+                ],
+                "correct": 1
+            },
+            {
+                "category": "Música",
+                "question": "¿Qué cantante popularizó la canción 'Rolling in the Deep'?",
+                "answers": [
+                    "Adele",
+                    "Beyoncé",
+                    "Taylor Swift",
+                    "Rihanna"
+                ],
+                "correct": 0
+            },
+            {
+                "category": "Música",
+                "question": "¿Qué cantante es conocido como 'La Reina del Soul'?",
+                "answers": [
+                    "Whitney Houston",
+                    "Diana Ross",
+                    "Aretha Franklin",
+                    "Tina Turner"
+                ],
+                "correct": 2
+            },
+            {
+                "category": "Música",
+                "question": "¿Qué famoso compositor alemán quedó sordo a los 30 años?",
+                "answers": [
+                    "Johann Sebastian Bach",
+                    "Ludwig van Beethoven",
+                    "Franz Schubert",
+                    "Richard Wagner"
+                ],
+                "correct": 1
+            }
+        ]
     }
 }

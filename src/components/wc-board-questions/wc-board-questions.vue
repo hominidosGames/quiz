@@ -1,34 +1,45 @@
 <template>
 
-    <div
-        class="wrapper-board-question bg-center bg-no-repeat bg-cover bg-top h-screen flex justify-center flex-col items-center">
+    <div class="wrapper-board-question bg-center bg-no-repeat bg-cover bg-top flex flex-col items-center">
         <!-- Timer -->
-        <wc-timer-bar></wc-timer-bar>
+        <!-- <wc-timer-bar></wc-timer-bar>-->
 
         <!--Panel pregunta-->
-        <div ref="panelQuestion"
-            class="board-question w-95vw h-auto min-h-10rem flex justify-center items-center fixed top-25 m-5 p-5 border border-black sm:w-4/5 md:w-1/2 text-sm py-2.5 mb-10 rounded-lg font-mono bg-purple-900 shadow-lg hover:shadow-lg">
-            <p class="text-center">
-                {{ question }}
-            </p>
-        </div>
-
-        <!--Botones-->
-        <div class="flex justify-center flex-col items-center w-screen m-5 mt-40">
-            <div class="button-answer" v-for="(answer, index) in answers" :key="index">
-                <div class="button-answer-inner" :id="'button-answer-' + (index + 1)"
-                    :ref="'buttonAnswer' + (index + 1)">
-                    <div class="button-answer-front bg-purple-900"> {{ index + 1 }} </div>
-                    <div class="button-answer-back bg-purple-900" @click="handleClickButtonAnswer($event, index)">
-                        {{ answer }}
+        <div v-if="flagTrue == false" class="flex flex-col justify-center items-center">
+            <div ref="panelQuestion"
+                class="w-90vw board-question m-2 h-auto min-h-10rem flex justify-center p-10 items-center border border-black text-base rounded-lg font-mono shadow-lg">
+                <p class="text-center">
+                    {{ question }}
+                </p>
+            </div>
+            <div class="flex justify-center flex-col items-center w-screen mt-2">
+                <div class="button-answer" v-for="(answer, index) in answers" :key="index">
+                    <div class="button-answer-inner" :id="'button-answer-' + (index + 1)"
+                        :ref="'buttonAnswer' + (index + 1)">
+                        <div class="button-answer-front bg-purple-400 font-mono"> {{ index + 1 }} </div>
+                        <div class="button-answer-back bg-purple-400 font-mono"
+                            @click="handleClickButtonAnswer($event, index)">
+                            {{ answer }}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+
+        <div v-else="flagTrue" class="mt-50 p-10 flex flex-col items-center justify-center">
+            <!-- <wc-spinner></wc-spinner> -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-22 h-22 mx-auto">
+                <title>star</title>
+                <path fill="green" stroke="white" stroke-width="2"
+                    d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+            </svg>
+            <p class="mt-5 text-medium"> + 25</p>
+        </div>
+
         <img class="base-main-menu" src="../../../assets/images/baseMainMenu.png" />
 
-        <div class="ani-background">
+        <div class="ani-background bg-purple-800">
             <div class="word top-left-bottom-right">?</div>
             <div class="word top-right-bottom-left">?</div>
             <div class="word bottom-left-top-right">?</div>
@@ -41,8 +52,9 @@
 
 <style>
 .wrapper-board-question {
-    
+    height: 100%;
     color: white;
+    padding: 15px;
 }
 
 .board-question {
@@ -50,6 +62,7 @@
         0 0 3px 1.5px #fff,
         0 0 5px 3px yellow,
         0 0 7px 4.5px yellow;
+    margin-bottom: 40px
 }
 
 .red {
@@ -71,7 +84,7 @@
     width: 300px;
     height: 50px;
     perspective: 1000px;
-    margin-top: 25px;
+    margin-top: 40px;
 }
 
 .button-answer-inner {
@@ -103,10 +116,14 @@
 .button-answer-back {
     position: absolute;
     width: 300px;
-    line-height: 50px;
+    line-height: 48px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    color: white;
+    color: black;
+    border: solid 1px;
+    border-radius: 2px;
+    border-color: white;
+
 }
 
 .button-answer-back {
@@ -281,8 +298,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgb(135, 46, 217);
     z-index: -1;
+    top: -50px
 }
 
 /* Animaciones en diagonal */
@@ -292,9 +309,11 @@
         top: 0;
         opacity: 0;
     }
-    50%{
+
+    50% {
         opacity: 1;
     }
+
     100% {
         left: 100%;
         top: 100%;
@@ -307,9 +326,11 @@
         right: 0;
         top: 0;
     }
-    50%{
+
+    50% {
         opacity: 1;
     }
+
     100% {
         right: 100%;
         top: 100%;
@@ -321,9 +342,11 @@
         left: 0;
         bottom: 0;
     }
-    50%{
+
+    50% {
         opacity: 1;
     }
+
     100% {
         left: 100%;
         bottom: 100%;
@@ -335,9 +358,11 @@
         right: 0;
         bottom: 0;
     }
-    50%{
+
+    50% {
         opacity: 1;
     }
+
     100% {
         right: 100%;
         bottom: 100%;
@@ -387,5 +412,20 @@
 
 .word:nth-child(4) {
     animation-delay: 4s;
+}
+
+.loader {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #000;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
 </style>

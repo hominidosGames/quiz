@@ -15,9 +15,12 @@ export default defineComponent({
         goToGame(){
             this.$refs.foco1.classList.add("hiddenLight1");
             this.$refs.foco2.classList.add("hiddenLight2");
+            // setTimeout(() => {
+            //    routes.push({ path: '/tabs/' });
+            // }, 1000);
             setTimeout(() => {
-               routes.push({ path: '/tabs/' });
-            }, 1000);
+                routes.push({ path: '/category' });
+             }, 1000);
         },
 
         goToOptions(){

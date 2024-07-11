@@ -6,11 +6,17 @@ import Presentation from '@/views/Presentation.vue';
 import MainMenu from '@/views/MainMenu.vue';
 import Options from '@/views/Options.vue';
 import Credits from '@/views/Credits.vue';
+import Category from '@/views/Category.vue';
+
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     redirect: 'splash'
+  },
+  {
+    path: '/category',
+    component: Category
   },
   {
     path: "/splash/",
