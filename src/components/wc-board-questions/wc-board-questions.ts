@@ -25,7 +25,6 @@ export default defineComponent({
 
     mounted() {
         this.manager = new Manager(this);
-        this.manager.initGame();
     },
     methods: {
         handleClickButtonAnswer(evt, indexRes) {

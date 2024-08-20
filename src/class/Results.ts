@@ -3,30 +3,30 @@ import { Helper } from '@/Helper';
 export class Results {
 
     private component: any;
-    private arrayTrueOptions = Helper.trueAnswersDay();
-    // private flag: boolean = false;
-    // private numTrue: Array<any> = [];
-
 
     constructor($: any) {
         this.component = $;
     }
 
+    public async getDatesFirebase() {
+        let arrayTrueOptions = Helper.trueAnswersDay();
+        return arrayTrueOptions
+    }
 
-    public verifyResponse(arrayResponsesUser: Array<any>) {
-        let arrayVerificado: Array<any> = [];
+
+    public async verifyResponse(arrayResponsesUser: Array<any>) {
+        let trueArray = await this.getDatesFirebase();
+        let arrayVerified: Array<any> = [];
         arrayResponsesUser.forEach((element: any) => {
-            this.arrayTrueOptions.forEach((trueResponse) => {
+            trueArray.forEach((trueResponse) => {
                 if (element.response == trueResponse.response) {
-                    arrayVerificado.push(trueResponse.response)
+                    arrayVerified.push(trueResponse.response);
                 }
-                this.paintTrueResponses(arrayVerificado)
+                this.paintTrueResponses(arrayVerified)
                 this.component.flag = true;
-                this.component.numTrue = arrayVerificado.length * 25
+                this.component.numTrue = arrayVerified.length * 25
             })
-
         })
-
     }
 
     public paintTrueResponses(arrayVerified: Array<any>) {

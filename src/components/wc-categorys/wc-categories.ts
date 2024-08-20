@@ -1,6 +1,7 @@
 import { defineComponent } from 'vue';
 import { Manager } from '@/class/Manager';
 import routes from '@/router/index';
+import { Helper } from '@/Helper';
 
 export default defineComponent({
     name: 'wc-categories',
@@ -24,10 +25,11 @@ export default defineComponent({
             setTimeout(() => {
                 routes.push({ path: '/tabs/' });
             }, 1500);
-
         },
 
         sendImageCategory() {
+            console.log('entra');
+
             this.menuResults.sendImageCategory();
         },
 
