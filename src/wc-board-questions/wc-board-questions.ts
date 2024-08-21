@@ -29,7 +29,6 @@ export default defineComponent({
     mounted() {
 
         this.startGame = new Manager(this);
-        // this.startGame.initGame();
         this.startTimeout();
         
     },

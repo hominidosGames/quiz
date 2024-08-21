@@ -81,7 +81,7 @@
 
 .button-answer {
     background-color: transparent;
-    width: 300px;
+    width: 320px;
     height: 50px;
     perspective: 1000px;
     margin-top: 40px;
@@ -115,7 +115,7 @@
 .button-answer-front,
 .button-answer-back {
     position: absolute;
-    width: 300px;
+    width: 320px;
     line-height: 48px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;

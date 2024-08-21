@@ -7,7 +7,8 @@ import MainMenu from '@/views/MainMenu.vue';
 import Options from '@/views/Options.vue';
 import Credits from '@/views/Credits.vue';
 import Category from '@/views/Category.vue';
-
+import Login from '@/views/Login.vue';
+import Register from '@/views/Register.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -33,6 +34,14 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/options',
     component: Options
+  },
+  {
+    path: '/login',
+    component: Login
+  },
+  {
+    path: '/register',
+    component: Register
   },
   {
     path: '/credits',

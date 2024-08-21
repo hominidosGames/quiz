@@ -45,13 +45,12 @@ export class Manager {
     }
 
     public initGame() {
-        // Helper.addQuestionsDocument()   añade documentos a firebase
+        // Helper.addQuestionsDocument();
         this.printQuestion();
         this.printAnswers();
         setTimeout(() => { this.showAnswers(); }, 500);
         setTimeout(() => { this.initTimer(); }, 4000);
     }
-
 
     public checkAnswer(indexRes: number, button) {
         let isCorrect = false;
@@ -112,7 +111,6 @@ export class Manager {
             }
         });
     }
-
 
     public activePoints() {
         setTimeout(() => {

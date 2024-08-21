@@ -7,7 +7,6 @@ export class Helper {
     static getDay() {
         const date = new Date();
         const dayYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / (24 * 60 * 60 * 1000));
-        console.log(dayYear, 'dia');
 
         return dayYear;
     }
@@ -15,18 +14,12 @@ export class Helper {
     static async trueAnswersDay(): Array<{ question: string; response: string }> {
         let trueOptions: Array<{ question: string; response: string }> = [];
         let questionsDay: Array<any> = [];
-        const dayIndex: number = this.getDay();
-        
-        // questionsDay = mookJson.questions[dayIndex];
-     
         questionsDay = await this.getQuizData()
-        console.log(questionsDay,'questionday');
-        
         questionsDay?.forEach((element) => {
             trueOptions.push({ question: element.question, response: element.answers[element.correct] })
         })
-        console.log(trueOptions,'????');
-        
+        console.log(trueOptions, '????');
+
         return trueOptions
     }
 
@@ -57,7 +50,7 @@ export class Helper {
 
     }
 
-
+    //traer preguntas del día.
     static async getQuizData() {
         const db = this.conectFirebase();
         let id = this.getDay().toString();
@@ -81,72 +74,16 @@ export class Helper {
     }
 
 
-
+    //añadir preguntas a la base de datos
     static async addQuestionsDocument() {
         const db = Helper.conectFirebase();
         let id = this.getDay().toString();
         let idCortado = id.slice(0, 3);
+        let jsonQuestionsDay = mookJson.questions
         try {
-            // Datos del documento con todas las preguntas
+
             const questionsData = {
-                QuestionArray: [
-                    {
-                        "category": "Literatura",
-                        "question": "¿Quién escribió 'Don Quijote de la Mancha'?",
-                        "answers": [
-                            "Miguel de Cervantes",
-                            "Federico García Lorca",
-                            "Gabriel García Márquez",
-                            "Pablo Neruda"
-                        ],
-                        "correct": 0
-                    },
-                    {
-                        "category": "Literatura",
-                        "question": "¿Cuál es la obra más conocida de William Shakespeare?",
-                        "answers": [
-                            "Hamlet",
-                            "Romeo y Julieta",
-                            "Macbeth",
-                            "Otelo"
-                        ],
-                        "correct": 0
-                    },
-                    {
-                        "category": "Literatura",
-                        "question": "¿Quién escribió 'Cien años de soledad'?",
-                        "answers": [
-                            "Gabriel García Márquez",
-                            "Mario Vargas Llosa",
-                            "Julio Cortázar",
-                            "Isabel Allende"
-                        ],
-                        "correct": 0
-                    },
-                    {
-                        "category": "Literatura",
-                        "question": "¿Qué escritor es conocido por sus obras de ciencia ficción como '1984'?",
-                        "answers": [
-                            "Aldous Huxley",
-                            "Isaac Asimov",
-                            "George Orwell",
-                            "Philip K. Dick"
-                        ],
-                        "correct": 2
-                    },
-                    {
-                        "category": "Literatura",
-                        "question": "¿Quién escribió 'El principito'?",
-                        "answers": [
-                            "Antoine de Saint-Exupéry",
-                            "Jorge Luis Borges",
-                            "Paulo Coelho",
-                            "Franz Kafka"
-                        ],
-                        "correct": 0
-                    }
-                    // Añadir más preguntas aquí
-                ]
+                QuestionArray: jsonQuestionsDay
             };
 
             // Referencia al documento
