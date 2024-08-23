@@ -6,10 +6,11 @@ import { Result } from '@/types/Result';
 import { Answer } from '@/types/Question';
 import { SoundMaster } from './SoundMaster';
 
+
 export class Manager {
 
     private board: any;
-    private questionsDay: Answer[];
+    private questionsDay: [];
     private numActualQuestion: number;
     private timer: Timer;
     private results: Result[];
@@ -19,26 +20,40 @@ export class Manager {
 
     constructor(board: any) {
         this.board = board;
-        this.questionsDay = mookJson.questions[Helper.getDay()];
         this.numActualQuestion = 0;
         this.timer = new Timer(100);
         this.results = [];
         this.soundMaster = new SoundMaster();
         this.soundMaster.preload(['correct', 'error'])
         this.isFinishRound = false;
+        this.loadFirebaseAndInitGame();
+    }
+
+    private async loadFirebaseAndInitGame() {
+        try {
+            const resultados = await this.loadFirebase();
+            this.questionsDay = resultados;
+            this.initGame();
+        } catch (error) {
+            console.error('Error al cargar los datos de Firebase:', error);
+        }
+    }
+
+    public async loadFirebase() {
+        const resultados = await Helper.getQuizData();
+        return resultados
     }
 
     public initGame() {
+        // Helper.addQuestionsDocument();
         this.printQuestion();
         this.printAnswers();
-
         setTimeout(() => { this.showAnswers(); }, 500);
         setTimeout(() => { this.initTimer(); }, 4000);
     }
 
     public checkAnswer(indexRes: number, button) {
         let isCorrect = false;
-
         if (indexRes == this.questionsDay[this.numActualQuestion].correct)
             isCorrect = true;
         this.flagTrue = true;
@@ -97,7 +112,6 @@ export class Manager {
         });
     }
 
-
     public activePoints() {
         setTimeout(() => {
             this.board.flagTrue = true
@@ -134,8 +148,9 @@ export class Manager {
         document.getElementsByClassName("board-question")[0].classList.add("animationShake");
     }
 
-    protected sendImageCategory() {
-        this.board.category = this.questionsDay[0].category
+    protected async sendImageCategory() {
+        let datesFirebase = await this.loadFirebase()
+        this.board.category = datesFirebase[0].category
         const elementImage = document.getElementById('imagenCategory');
         let categoryWord = this.board.category.toLowerCase();
         if (elementImage) {

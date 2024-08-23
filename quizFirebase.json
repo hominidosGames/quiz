@@ -1,0 +1,124 @@
+{
+    "questions": [
+        {
+            "id": "193",
+            "category": "Cine",
+            "question": "¿Quién interpretó a James Bond en la película 'Skyfall'?",
+            "answers": [
+                "Daniel Craig",
+                "Pierce Brosnan",
+                "Sean Connery",
+                "Roger Moore"
+            ],
+            "correct": 0
+        },
+        {
+            "id": "193",
+            "category": "Cine",
+            "question": "¿Cuál es la película más taquillera de todos los tiempos?",
+            "answers": [
+                "Avengers: Endgame",
+                "Avatar",
+                "Titanic",
+                "Star Wars: El despertar de la Fuerza"
+            ],
+            "correct": 0
+        },
+        {
+            "id": "193",
+            "category": "Cine",
+            "question": "¿Quién dirigió la película 'La La Land'?",
+            "answers": [
+                "Christopher Nolan",
+                "Martin Scorsese",
+                "Quentin Tarantino",
+                "Damien Chazelle"
+            ],
+            "correct": 3
+        },
+        {
+            "id": "193",
+            "category": "Cine",
+            "question": "¿Cuál de las siguientes películas ganó el premio a la Mejor Película en los Premios Óscar de 2019?",
+            "answers": [
+                "Green Book",
+                "Bohemian Rhapsody",
+                "Roma",
+                "La favorita"
+            ],
+            "correct": 0
+        },
+        {
+            "id": "193",
+            "category": "Cine",
+            "question": "¿Quién interpretó a Joker en la película homónima de 2019?",
+            "answers": [
+                "Joaquin Phoenix",
+                "Heath Ledger",
+                "Jared Leto",
+                "Jack Nicholson"
+            ],
+            "correct": 0
+        },
+        {
+            "id": "194",
+            "category": "Geografía",
+            "question": "¿Cuál es la moneda de Rumania?",
+            "answers": [
+                "Euro",
+                "Libra esterlina",
+                "Leu rumano",
+                "Dólar estadounidense"
+            ],
+            "correct": 2
+        },
+        {
+            "id": "194",
+            "category": "Geografía",
+            "question": "¿Cuál es el río más largo del mundo?",
+            "answers": [
+                "Nilo",
+                "Amazonas",
+                "Yangtsé",
+                "Misisipi"
+            ],
+            "correct": 1
+        },
+        {
+            "id": "194",
+            "category": "Geografía",
+            "question": "¿Cuál es el país más grande del mundo en términos de territorio?",
+            "answers": [
+                "Estados Unidos",
+                "Canadá",
+                "Rusia",
+                "China"
+            ],
+            "correct": 2
+        },
+        {
+            "id": "194",
+            "category": "Geografía",
+            "question": "¿En qué año comenzó la Primera Guerra Mundial?",
+            "answers": [
+                "1918",
+                "1939",
+                "1941",
+                "1914"
+            ],
+            "correct": 3
+        },
+        {
+            "id": "194",
+            "category": "Geografía",
+            "question": "¿Qué evento dio inicio a la Segunda Guerra Mundial?",
+            "answers": [
+                "El ataque a Pearl Harbor",
+                "La invasión de Polonia por parte de Alemania",
+                "La firma del Tratado de Versalles",
+                "La invasión de Francia por parte de Alemania"
+            ],
+            "correct": 1
+        }
+    ]
+}

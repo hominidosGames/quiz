@@ -1,29 +1,35 @@
 <template>
+
     <img class="foco" ref="foco1" src="../../../assets/images/foco1.png" />
     <img class="foco2" ref="foco2" src="../../../assets/images/foco2.png" />
-    <div class="flip-card mt-50">
+    <div class="flip-card mt-60">
 
-        <div class="flip-card-inner" ref="redCard">
-            <div class="flip-card-front bg-purple-800">
+        <div class="flip-card-inner" @click="flipCard" ref="redCard">
+            <div class="flip-card-front bg-purple-800 dark:bg-shadesOfBlue shadow-md">
                 <p class="title p-2 font-mono">El tema de hoy es...</p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-15 h-15 mx-auto"><title>orbit-variant</title><path fill="white"  d="M19 8L15 12H18C18 15.31 15.31 18 12 18C11 18 10.03 17.75 9.2 17.3L7.74 18.76C8.97 19.54 10.43 20 12 20C16.42 20 20 16.42 20 12H23M6 12C6 8.69 8.69 6 12 6C13 6 13.97 6.25 14.8 6.7L16.26 5.24C15.03 4.46 13.57 4 12 4C7.58 4 4 7.58 4 12H1L5 16L9 12M14 12C14 13.11 13.11 14 12 14S10 13.11 10 12 10.9 10 12 10 14 10.9 14 12Z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-15 h-15 mx-auto">
+                    <title>orbit-variant</title>
+                    <path fill="white"
+                        d="M19 8L15 12H18C18 15.31 15.31 18 12 18C11 18 10.03 17.75 9.2 17.3L7.74 18.76C8.97 19.54 10.43 20 12 20C16.42 20 20 16.42 20 12H23M6 12C6 8.69 8.69 6 12 6C13 6 13.97 6.25 14.8 6.7L16.26 5.24C15.03 4.46 13.57 4 12 4C7.58 4 4 7.58 4 12H1L5 16L9 12M14 12C14 13.11 13.11 14 12 14S10 13.11 10 12 10.9 10 12 10 14 10.9 14 12Z" />
+                </svg>
             </div>
-            <div class="flip-card-back items-center bg-amber-500">
+            <div class="flip-card-back items-center bg-purple-300 bg-white dark:bg-shadesOfBlue shadow-md">
                 <div class="flex flex-col">
                     <p class="title font-mono">{{ category }}</p>
                     <div class="w-30 mt-2 flex items-center">
                         <img class="object-center" alt="imagen-categoria" id="imagenCategory" />
                     </div>
-
-                    <button @click="goToGame()"
-                        class="mt-16 text-center text-sm font-mono text-black hover:text-white p-1 rounded-full font-serif hover:bg-black border-solid border-1 shadow-lg">
-                        START
-                    </button>
                 </div>
-
             </div>
         </div>
-    </div>
+
+
+</div>
+
+
+
+
+
 </template>
 
 
@@ -75,10 +81,7 @@
     /* background-color: rgb(174, 107, 250); */
     color: white;
     z-index: 2;
-    box-shadow:
-        0 0 3px 1.5px #fff,
-        0 0 5px 3px yellow,
-        0 0 7px 4.5px yellow;
+    border: black solid 1px;
 }
 
 .flip-card-back {
@@ -97,10 +100,7 @@
     color: rgb(0, 0, 0);
     transform: rotateY(180deg);
     z-index: 2;
-    box-shadow:
-        0 0 3px 1.5px #fff,
-        0 0 5px 3px yellow,
-        0 0 7px 4.5px yellow;
+    border: black solid 1px;
 }
 
 

@@ -1,13 +1,13 @@
 <template>
     <div class="main-menu">
         <img class="back-main-menu" src="../../../assets/images/backMainMenu/backMainMenu.gif" />
-        <img class="logo-main-menu" src="../../../assets/images/logoMainMenu.gif" />
+        <img class="logo-main-me  <wc-login></wc-login>nu" src="../../../assets/images/logoMainMenu.gif" />
         <img class="base-main-menu" src="../../../assets/images/baseMainMenu.png" />
         <img class="foco" ref="foco1" src="../../../assets/images/foco1.png" />
         <img class="foco2" ref="foco2" src="../../../assets/images/foco2.png" />
-
+      
         <button @click="goToGame()"
-            class="button-main-menu p-3 bg-purple-800 text-white border border-black w-1/2 text-sm w-20 h-20 text-sm py-2.5 me-2 mb-8 rounded-full font-mono hover:bg-purple-600">JUGAR!
+            class="button-main-menu p-3 bg-purple-800 text-white border border-black w-1/2 text-sm w-27 h-27 text-sm py-2.5 me-2 mb-8 rounded-full font-mono hover:bg-purple-600">Inicio
         </button>
     </div>
 
@@ -15,7 +15,6 @@
 
 <script src="./wc-main-menu"></script>
 <style scoped>
-
 .back-main-menu {
     background-color: #a463dfff;
     position: absolute;
@@ -23,6 +22,7 @@
     height: 100%;
     z-index: -1;
 }
+
 .main-menu {
     text-align: center;
     display: flex;
@@ -37,9 +37,9 @@
 .button-main-menu {
     z-index: 2;
     box-shadow:
-    0 0 3px 1.5px #fff, 
-    0 0 5px 3px yellow,
-    0 0 7px 4.5px yellow;
+        0 0 3px 1.5px #fff,
+        0 0 5px 3px yellow,
+        0 0 7px 4.5px yellow;
 }
 
 .logo-main-menu {
@@ -139,12 +139,10 @@
 }
 
 @keyframes showBase {
-    0% {
-    }
+    0% {}
 
     100% {
         bottom: 0
     }
 }
-
 </style>

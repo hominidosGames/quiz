@@ -1,9 +1,13 @@
 import { defineComponent } from 'vue';
 import routes from '@/router/index';
+import wcLogin from '../wc-login/wc-login.vue';
+
 
 export default defineComponent({
     name: 'wc-main-menu',
-    components: {},
+    components: {
+        'wc-login': wcLogin,
+    },
     data() {
         return {};
     },
@@ -19,7 +23,7 @@ export default defineComponent({
             //    routes.push({ path: '/tabs/' });
             // }, 1000);
             setTimeout(() => {
-                routes.push({ path: '/category' });
+                routes.push({ path: '/login' });
              }, 1000);
         },
 
