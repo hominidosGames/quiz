@@ -30,7 +30,7 @@
                     <p class="p-2 text-sm">{{ numTrue }}</p>
                 </div>
             </div>
-            <div class="mt-20 flex flex-col items-center">
+            <div class="mt-10 flex flex-col items-center">
 
                 <button @click="goToMenu"
                     class="button-main-menu p-3 text-white border border-black w-1/2 text-sm w-27 h-27 text-sm py-2.5 me-2 mb-8 rounded-full font-mono hover:bg-purple-600">Menú
