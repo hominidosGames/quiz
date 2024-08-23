@@ -18,6 +18,10 @@ export default defineComponent({
    
         goToRegister(){
             routes.push({ path: '/register' });
+        },
+
+        goToQuestions(){
+            routes.push({ path: '/tabs' });
         }
 
     }

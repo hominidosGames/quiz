@@ -45,7 +45,7 @@ export class Manager {
     }
 
     public initGame() {
-        // Helper.addQuestionsDocument();
+        Helper.addQuestionsDocument();
         this.printQuestion();
         this.printAnswers();
         setTimeout(() => { this.showAnswers(); }, 500);

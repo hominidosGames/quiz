@@ -20,7 +20,7 @@
           <input type="password" id="password" name="password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
           <a href="#" class="block text-right text-xs text-cyan-600 mt-2">¿Olvidaste tu contraseña?</a>
         </div>
-        <button type="submit" class="w-32 bg-gradient-to-r from-purple-600 to-purple-800 text-white py-2 rounded-lg mx-auto block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 mt-4 mb-6">Acceso</button>
+        <button @click="goToQuestions"  type="submit" class="w-32 bg-gradient-to-r from-purple-600 to-purple-800 text-white py-2 rounded-lg mx-auto block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 mt-4 mb-6">Acceso</button>
       </form>
       <div class="text-center">
         <p class="text-sm">¿No tienes una cuenta? <button @click="goToRegister" class="text-cyan-600">Regístrate ahora</button></p>
