@@ -1,6 +1,7 @@
 import mookJson from '../../quiz/quiz.json';
 import { initializeApp } from "firebase/app";
 import { doc, getDoc, getFirestore, query, setDoc, collection, where, getDocs } from "firebase/firestore";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
 export class Helper {
     static cosa = null
@@ -87,11 +88,11 @@ export class Helper {
             };
 
             // Referencia al documento
-            const docRef = doc(db, "quizzes", '236');
+            const docRef = doc(db, "quizzes", '240');
 
             // Agregar el documento con todas las preguntas
             await setDoc(docRef, questionsData);
-            console.log("Documento 'questions' agregado correctamente.");
+            console.log("Documento 'questiosns' agregado correctamente.");
         } catch (e) {
             console.error("Error agregando el documento: ", e);
         }
@@ -99,6 +100,57 @@ export class Helper {
 
 
 
-}
 
+    //Registro de usuarios
+    static async register(email: any, password: any) {
+        let typeError;
+        try {
+            Helper.conectFirebase();
+            const auth = getAuth();
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password)
+            return userCredential.user
+
+        } catch (error) {
+
+            const errorMessage = error.code;
+            console.log(errorMessage, 'el error');
+            switch (errorMessage) {
+                case 'auth/email-already-in-use':
+                    typeError = 'El usuario/email ya está registrado.'
+                    break;
+                case 'auth/weak-password':
+                    typeError = 'La contraseña es demasiado débil.'
+                    break;
+                case 'auth/invalid-email':
+                    typeError = 'El formato del correo electrónico no es válido.'
+                    break;
+            }
+
+
+            return typeError
+
+        }
+
+    }
+
+
+    static async login(email: any, password: any) {
+
+        try {
+            Helper.conectFirebase();
+            const auth = getAuth();
+            const userLogin = await signInWithEmailAndPassword(auth, email, password)
+            return userLogin.user
+        } catch (error) {
+            const errorMessage = error;
+            return errorMessage
+        }
+
+    }
+
+
+
+
+
+}
 

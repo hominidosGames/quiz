@@ -6,9 +6,7 @@
         <img class="foco" ref="foco1" src="../../../assets/images/foco1.png" />
         <img class="foco2" ref="foco2" src="../../../assets/images/foco2.png" />
       
-        <button @click="goToGame()"
-            class="button-main-menu p-3 bg-purple-800 text-white border border-black w-1/2 text-sm w-27 h-27 text-sm py-2.5 me-2 mb-8 rounded-full font-mono hover:bg-purple-600">Inicio
-        </button>
+        <button @click="goToGame"  type="submit" class="w-32 bg-gradient-to-r from-purple-600 to-purple-800 text-white py-2 rounded-lg mx-auto block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 mt-4 mb-6">Acceso</button>
     </div>
 
 </template>

@@ -1,6 +1,7 @@
 import { defineComponent } from 'vue';
 import routes from '@/router/index';
 import wcLogin from '../wc-login/wc-login.vue';
+import { Helper } from '@/Helper';
 
 
 export default defineComponent({
@@ -16,7 +17,10 @@ export default defineComponent({
     mounted() {
     },
     methods: {
-        goToGame(){
+        goToGame() {
+          
+            console.log('el dia es:', Helper.getDay());
+
             this.$refs.foco1.classList.add("hiddenLight1");
             this.$refs.foco2.classList.add("hiddenLight2");
             // setTimeout(() => {
@@ -24,10 +28,10 @@ export default defineComponent({
             // }, 1000);
             setTimeout(() => {
                 routes.push({ path: '/login' });
-             }, 1000);
+            }, 1000);
         },
 
-        goToOptions(){
+        goToOptions() {
             routes.push({ path: '/options' });
         }
     }
