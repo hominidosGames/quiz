@@ -1,7 +1,7 @@
 import mookJson from '../../quiz/quiz.json';
 import { initializeApp } from "firebase/app";
 import { doc, getDoc, getFirestore, query, setDoc, collection, where, getDocs } from "firebase/firestore";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 export class Helper {
     static cosa = null
@@ -88,7 +88,7 @@ export class Helper {
             };
 
             // Referencia al documento
-            const docRef = doc(db, "quizzes", '240');
+            const docRef = doc(db, "quizzes", '241');
 
             // Agregar el documento con todas las preguntas
             await setDoc(docRef, questionsData);
@@ -134,22 +134,48 @@ export class Helper {
     }
 
 
+
+    //logueo de usuarios
     static async login(email: any, password: any) {
+        let responseLogin;
 
         try {
             Helper.conectFirebase();
             const auth = getAuth();
-            const userLogin = await signInWithEmailAndPassword(auth, email, password)
-            return userLogin.user
+            await signInWithEmailAndPassword(auth, email, password)
+            responseLogin = {
+                error: false,
+                message: 'Logueado correctamente'
+            }
+
+            return responseLogin
+
         } catch (error) {
-            const errorMessage = error;
-            return errorMessage
+            responseLogin = {
+                error: true,
+                message: 'Los datos introducidos no son correctos'
+            }
+
+            return responseLogin
         }
 
     }
 
 
+    static async loginGoogle() {
+        try {
+            Helper.conectFirebase();
+            const auth = getAuth();
+            const provider = new GoogleAuthProvider();
+            const result = await signInWithPopup(auth, provider);
+            console.log(provider, 'el provider');
+        } catch (error) {
+            console.log(error, 'el error en login con google');
 
+        }
+
+
+    }
 
 
 }

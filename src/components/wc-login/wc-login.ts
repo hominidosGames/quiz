@@ -1,19 +1,21 @@
 import { defineComponent } from 'vue';
 import routes from '@/router/index';
-import { Helper } from '@/Helper';
+import { User } from '@/class/User';
 
 export default defineComponent({
     name: 'wc-login',
 
     data() {
         return {
-
+            error: false,
+            errorLogin: ''
         };
     },
     props: {},
 
     mounted() {
 
+        this.loginUser = new User(this);
     },
     methods: {
 
@@ -22,19 +24,23 @@ export default defineComponent({
         },
 
         goToQuestions() {
-            routes.push({ path: '/tabs' });
+            routes.push({ path: '/rules' });
         },
 
         async login() {
-            let email = document.querySelector('#userEmail');
-            let password = document.querySelector('#password');
-            let userLogin = await Helper.login(email, password);
-            console.log(userLogin,'userlogin');
-            
-            if(userLogin){
+            let email = document.querySelector('#userEmail').value;
+            let password = document.querySelector('#password').value;
+            let responseLogin = await this.loginUser.login(email, password);
+         
+            if (responseLogin == true) {
                 this.goToQuestions();
             }
 
+        },
+
+
+        async loginGoogle(){
+            this.loginUser.loginGoogle();
         }
 
     }

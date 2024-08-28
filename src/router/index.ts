@@ -9,6 +9,8 @@ import Credits from '@/views/Credits.vue';
 import Category from '@/views/Category.vue';
 import Login from '@/views/Login.vue';
 import Register from '@/views/Register.vue';
+import Rules from '@/views/Rules.vue';
+
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -46,6 +48,10 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/credits',
     component: Credits
+  },
+  {
+    path: '/rules',
+    component: Rules
   },
   {
     path: '/tabs/',

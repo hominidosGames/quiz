@@ -1,12 +1,12 @@
 <template>
-    <div class="main-menu">
+    <div class="main-menu font-mono ">
         <img class="back-main-menu" src="../../../assets/images/backMainMenu/backMainMenu.gif" />
         <img class="logo-main-me  <wc-login></wc-login>nu" src="../../../assets/images/logoMainMenu.gif" />
         <img class="base-main-menu" src="../../../assets/images/baseMainMenu.png" />
         <img class="foco" ref="foco1" src="../../../assets/images/foco1.png" />
         <img class="foco2" ref="foco2" src="../../../assets/images/foco2.png" />
       
-        <button @click="goToGame"  type="submit" class="w-32 bg-gradient-to-r from-purple-600 to-purple-800 text-white py-2 rounded-lg mx-auto block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 mt-4 mb-6">Acceso</button>
+        <button @click="goToGame"  type="submit" class="w-40 h-10 bg-gradient-to-r from-purple-600 to-purple-800 text-white py-2 rounded-lg mx-auto block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 mt-4 mb-6">Acceso</button>
     </div>
 
 </template>
