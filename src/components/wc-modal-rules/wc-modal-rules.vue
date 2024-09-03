@@ -18,7 +18,7 @@
 
             <button @click="closeModal"  type="submit" class="w-40 h-10 bg-gradient-to-r from-purple-600 to-purple-800 text-white py-2 rounded-lg mx-auto block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 mt-6 mb-6">Entendido</button>
             <div class="flex justify-center ">
-                <ion-checkbox label-placement="end">No volver a mostrar</ion-checkbox>
+                <ion-checkbox v-model="checkedShow" label-placement="end">No volver a mostrar</ion-checkbox>
             </div>
         </div>
     </div>

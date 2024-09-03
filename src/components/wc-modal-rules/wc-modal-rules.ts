@@ -8,7 +8,8 @@ export default defineComponent({
     components: { IonCheckbox },
     data() {
         return {
-            showModal: false
+            showModal: false,
+            checkedShow: false
         }
     },
     async mounted() {
@@ -18,13 +19,14 @@ export default defineComponent({
     methods: {
         async closeModal() {
             this.showModal = false;
-            LocalStorage.save("hiddenModalRules", "false")
+            if (this.checkedShow) 
+                LocalStorage.save("showModalRules", "false")
         },
 
         async loadData() {
-            const data = await LocalStorage.load("hiddenModalRules");
+            const data = await LocalStorage.load("showModalRules");
 
-            if (!data) this.showModal = true;
+            if (!data || data == "true") this.showModal = true;
         }
     }
 });
