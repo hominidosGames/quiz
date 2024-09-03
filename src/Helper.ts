@@ -88,7 +88,7 @@ export class Helper {
             };
 
             // Referencia al documento
-            const docRef = doc(db, "quizzes", '241');
+            const docRef = doc(db, "quizzes", '247');
 
             // Agregar el documento con todas las preguntas
             await setDoc(docRef, questionsData);

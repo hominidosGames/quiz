@@ -2,6 +2,7 @@ import { defineComponent } from 'vue';
 import routes from '@/router/index';
 import wcLogin from '../wc-login/wc-login.vue';
 import { Helper } from '@/Helper';
+import { LocalStorage } from '@/class/LocalStore';
 
 
 export default defineComponent({
@@ -14,7 +15,8 @@ export default defineComponent({
     },
     props: {},
 
-    mounted() {
+    async mounted() {
+        await await LocalStorage.init();
     },
     methods: {
         goToGame() {
@@ -33,6 +35,6 @@ export default defineComponent({
 
         goToOptions() {
             routes.push({ path: '/options' });
-        }
+        },
     }
 });

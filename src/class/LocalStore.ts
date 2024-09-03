@@ -1,39 +1,40 @@
 import { Storage } from '@ionic/storage';
 
 export class LocalStorage {
-    private storage: Storage;
-
-    constructor() {
-        this.storage = new Storage();
-    }
-
-    public async init() {
+    private static storage: Storage;
+    
+    public static async init() {
         try {
-            await this.storage.create();
+            LocalStorage.storage = new Storage();
+            await LocalStorage.storage.create();
+            console.log(`Base de datos inicializada`);
         } catch (e) {
             console.log(`Error al inicializar la base de datos: ${e}`);
         }
     }
 
-    public async save(key: string, value: string) {
+    public static async save(key: string, value: string) {
         try {
-            await this.storage.set(key, value);
+            if (!LocalStorage.storage) await LocalStorage.init();
+            await LocalStorage.storage.set(key, value);
         } catch (e) {
             console.log(`Error al salvar en base de datos: ${e}`);
         }
     }
 
-    public async load(key: string) {
+    public static async load(key: string) {
         try {
-            return await this.storage.get(key);
+            if (!LocalStorage.storage) await LocalStorage.init();
+            return await LocalStorage.storage.get(key);
         } catch (e) {
             console.log(`Error al cargar de la base de datos: ${e}`);
         }
     }
 
-    public async clear() {
+    public static async clear() {
         try {
-            await this.storage.clear();
+            if (!LocalStorage.storage) await LocalStorage.init();
+            await LocalStorage.storage.clear();
         } catch (e) {
             console.log(`Error al reiniciar la base de datos: ${e}`);
         }

@@ -1,11 +1,7 @@
 <template>
     <div class="p-5 flex flex-col items-center bg-gradient-to-r bg-purple-800 h-screen">
-
-        <wc-timer-bar></wc-timer-bar>
-
-        <wc-categories>
-            
-        </wc-categories>
+        <wc-categories></wc-categories>
+        <wc-modal-rules></wc-modal-rules>
 
     </div>
 </template>

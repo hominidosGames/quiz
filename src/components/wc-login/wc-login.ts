@@ -24,7 +24,7 @@ export default defineComponent({
         },
 
         goToQuestions() {
-            routes.push({ path: '/rules' });
+            routes.push({ path: '/category' });
         },
 
         async login() {
