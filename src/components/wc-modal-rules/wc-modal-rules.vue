@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-purple-800" v-if="showModal">
-        <div class="modal-rules bg-purple-100 ">
+    <div class="bg-purple-800 ani-modal" v-if="showModal">
+        <div class="modal-rules bg-purple-100">
             <h1 class="text-sm font-semibold text-center text-gray-1000 mt-10">Bienvenido un día más a</h1>
 
             <div class="flex justify-center">
@@ -36,5 +36,21 @@
     border-radius: 15px;
     opacity: 0.95;
     overflow-y: auto;
+}
+
+.ani-modal {
+    animation-duration: .5s;
+    animation-name: aniShow;
+    animation-fill-mode: both;
+}
+
+@keyframes aniShow {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 </style>
