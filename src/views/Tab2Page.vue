@@ -10,6 +10,6 @@
 
 
 import { IonPage } from '@ionic/vue';
-import wcBoardResults from '@/wc-board-results/wc-board-results.vue';
+import wcBoardResults from '@/components/wc-board-results/wc-board-results.vue';
 
 </script>

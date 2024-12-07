@@ -1,51 +1,47 @@
-
-import { useRoute } from 'vue-router';
-import mookJson from '../../quiz.json';
 import { Helper } from '@/Helper';
-import { Game } from '../class/Game'
 
 export class Results {
 
     private component: any;
-    private questionsDay?: Answer[];
 
     constructor($: any) {
         this.component = $;
+    }
 
+    public async getDatesFirebase() {
+        let arrayTrueOptions = Helper.trueAnswersDay();
+        return arrayTrueOptions
     }
 
 
-    public sendResults() {
-        const route = useRoute();
-        const asnwersUser: any = route.query.key;
-        this.questionsDay = mookJson.questions[Helper.getDay()];
-        if (this.questionsDay && asnwersUser) {
-            this.component.resultsTrue = this.sendResultsTrue(this.questionsDay, asnwersUser);
-            this.component.totalResults = this.sendTotalQuestions();
-        }
-    }
-
-
-    public sendResultsTrue(arrayTotal: Array<any>, arrayUser: Array<any>) {
-        let answersTrue: Array<any> = [];
-        arrayTotal.map((property) => {
-            property.answers.forEach((element) => {
-                arrayUser.forEach((answer) => {
-                    if (element === answer) {
-                        answersTrue.push({ questionUser: property.question, answerUser: element });
-                    }
-                })
+    public async verifyResponse(arrayResponsesUser: Array<any>) {
+        let trueArray = await this.getDatesFirebase();
+        let arrayVerified: Array<any> = [];
+        arrayResponsesUser.forEach((element: any) => {
+            trueArray.forEach((trueResponse) => {
+                if (element.response == trueResponse.response) {
+                    arrayVerified.push(trueResponse.response);
+                }
+                this.paintTrueResponses(arrayVerified)
+                this.component.flag = true;
+                this.component.numTrue = arrayVerified.length * 25
             })
         })
-        return answersTrue
+    }
+
+    public paintTrueResponses(arrayVerified: Array<any>) {
+        let prueba = document.querySelectorAll('#prueba');
+
+        prueba.forEach((nodo) => {
+            arrayVerified.forEach((elementTrue: any) => {
+                if (nodo.innerHTML == elementTrue) {
+                    nodo.style.backgroundColor = 'green';
+                }
+            })
+        })
     }
 
 
-    public sendTotalQuestions() {
-        this.game = new Game();
-        let totalTrueQuestionDay = this.game.sendAnswersAndQuestiontrue();
-        return totalTrueQuestionDay
-    }
 
 
 

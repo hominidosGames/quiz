@@ -1,0 +1,4 @@
+- Curvar imagenes: https://fontmeme.com/es/doblar-imagenes/
+    * Opciones de curvatura: concavo
+    * Nivel de curvatura: 41
+- Crear gis con imagenes: https://ezgif.com/maker/ezgif-6-252d75dd-gif

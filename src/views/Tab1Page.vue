@@ -1,14 +1,11 @@
 <template>
    <ion-page>
-    <wcBoardQuestions />
+      <wcBoardQuestions />
    </ion-page>
 
 </template>
 
 <script setup lang="ts">
-
-
-import wcBoardQuestions from '@/wc-board-questions/wc-board-questions.vue';
-import { IonPage} from '@ionic/vue';
-
+import wcBoardQuestions from '@/components/wc-board-questions/wc-board-questions.vue';
+import { IonPage } from '@ionic/vue';
 </script>

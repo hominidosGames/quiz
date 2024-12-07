@@ -1,11 +1,57 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import TabsPage from '../views/TabsPage.vue'
+import TabsPage from '@/views/TabsPage.vue';
+import SplashScreen from '@/views/SplashScreen.vue';
+import Presentation from '@/views/Presentation.vue';
+import MainMenu from '@/views/MainMenu.vue';
+import Options from '@/views/Options.vue';
+import Credits from '@/views/Credits.vue';
+import Category from '@/views/Category.vue';
+import Login from '@/views/Login.vue';
+import Register from '@/views/Register.vue';
+import Rules from '@/views/Rules.vue';
+
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/tabs/tab1'
+    redirect: 'splash'
+  },
+  {
+    path: '/category',
+    component: Category
+  },
+  {
+    path: "/splash/",
+    component: SplashScreen
+  },
+  {
+    path: '/presentation',
+    component: Presentation
+  },
+  {
+    path: '/mainMenu',
+    component: MainMenu
+  },
+  {
+    path: '/options',
+    component: Options
+  },
+  {
+    path: '/login',
+    component: Login
+  },
+  {
+    path: '/register',
+    component: Register
+  },
+  {
+    path: '/credits',
+    component: Credits
+  },
+  {
+    path: '/rules',
+    component: Rules
   },
   {
     path: '/tabs/',
